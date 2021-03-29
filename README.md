@@ -24,7 +24,6 @@ I may add later a proper .md for each class, though this will not be of any prio
 For now all the user interface is in **brazilian portuguese**, I may add an english translation too, but not anytime soon.
 
 ## Project Structure, Building, Dependencies and Running
-***
 The project is developed using [Node.js](https://nodejs.org/) with [TypeScript](https://www.typescriptlang.org/) for the backend and plain HTML/JavaScript/CSS for the frontend. Though I may translate the frontend to TypeScript some day.
 
 The backend is located in `src/` and the frontend in `frontend/`.
@@ -53,7 +52,6 @@ node dist/index.js
 > For development and testing reasons, I caped the maximum of games running at the same time to 1. You can change this at `src/index.ts`, it is a const named `max_games`.
 
 ## Current state and to-do
----
 The project currently is at it's quarter-barebones. You can currently create lobbies and join/leave them, as well as "start" the games. (by start I mean you can broadcast the start package, but the actual game is not implemented yet)
 
 The To-Do list currently is:
