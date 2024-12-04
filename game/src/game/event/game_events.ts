@@ -1,4 +1,4 @@
-import { GamePauseReason } from ':protocol';
+import type { GamePauseReason } from ':protocol';
 
 export interface GameEvents {
     onGamePause: (reason: GamePauseReason) => void;

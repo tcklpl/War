@@ -1,5 +1,5 @@
-import { GLTFAnimationChannelTarget } from './gltf_animation_channel_target';
-import { GLTFAnimationSampler } from './gltf_animation_sampler';
+import type { GLTFAnimationChannelTarget } from './gltf_animation_channel_target';
+import type { GLTFAnimationSampler } from './gltf_animation_sampler';
 
 export class GLTFAnimationChannel {
     constructor(

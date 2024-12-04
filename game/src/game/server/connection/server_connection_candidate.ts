@@ -1,11 +1,12 @@
-import {
+import type {
     ClientToServerPackets,
     ResponseServerInfoBody,
     ServerToClientPackets,
     cl_LoginRequest,
     sv_LoginResponseOK,
 } from ':protocol';
-import { Socket, io } from 'socket.io-client';
+import type { Socket } from 'socket.io-client';
+import { io } from 'socket.io-client';
 import { UnknownConnectionError } from '../../../errors/game/connection/unknown_connection_error';
 import { UsernameNotAvailableError } from '../../../errors/game/connection/username_not_available';
 import { WrongPasswordError } from '../../../errors/game/connection/wrong_password';

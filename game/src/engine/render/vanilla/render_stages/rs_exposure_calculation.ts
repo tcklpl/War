@@ -1,11 +1,11 @@
 import { HistogramShader } from '../../../../shaders/post/auto_exposure/histogram_shader';
 import { LuminanceReducerShader } from '../../../../shaders/post/auto_exposure/luminance_reducer_shader';
-import { Shader } from '../../../../shaders/shader';
+import type { Shader } from '../../../../shaders/shader';
 import { BufferUtils } from '../../../../utils/buffer_utils';
-import { Texture } from '../../../data/texture/texture';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { Texture } from '../../../data/texture/texture';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageExposureCalculation implements RenderStage {
     private _chunkSize!: number;

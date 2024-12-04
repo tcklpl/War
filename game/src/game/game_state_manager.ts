@@ -1,6 +1,6 @@
 import { ReactStateSetters } from './react_state_setters';
-import { ReconnectionInfo } from './server/connection/reconnection_info';
-import { ServerConnection } from './server/connection/server_connection';
+import type { ReconnectionInfo } from './server/connection/reconnection_info';
+import type { ServerConnection } from './server/connection/server_connection';
 import { ServerConnectionCandidate } from './server/connection/server_connection_candidate';
 import { ServerList } from './server/server_list';
 import { WarServer } from './server/war_server';

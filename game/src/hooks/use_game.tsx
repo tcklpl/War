@@ -1,4 +1,4 @@
-import { WarGame } from ':game/war_game';
+import type { WarGame } from ':game/war_game';
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 export interface IGameContext {

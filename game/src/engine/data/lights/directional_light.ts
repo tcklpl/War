@@ -1,6 +1,7 @@
 import { MathUtils } from '../../../utils/math_utils';
-import { Quaternion } from '../quaternion/quaternion';
-import { Light, LightProperties } from './light';
+import type { Quaternion } from '../quaternion/quaternion';
+import type { LightProperties } from './light';
+import { Light } from './light';
 
 /*
     Directional light buffer format (0x70 Bytes):

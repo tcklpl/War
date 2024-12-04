@@ -1,5 +1,5 @@
-import { Mat4 } from '../mat/mat4';
-import { Vec3 } from '../vec/vec3';
+import type { Mat4 } from '../mat/mat4';
+import type { Vec3 } from '../vec/vec3';
 
 export abstract class Camera {
     private _pos: Vec3;

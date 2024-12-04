@@ -5,7 +5,7 @@ import CapitalismIcon from ':icons/capitalism/capitalism_icon';
 import CrownIcon from ':icons/crown_icon';
 import FeudalismIcon from ':icons/feudalism/feudalism_icon';
 import SocialismIcon from ':icons/socialism/socialism_icon';
-import { GameParty } from ':protocol';
+import type { GameParty } from ':protocol';
 import FlagIcon from '@mui/icons-material/Flag';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
@@ -32,7 +32,8 @@ import {
     useTheme,
 } from '@mui/material';
 import Tab from '@mui/material/Tab';
-import React, { ReactElement, useEffect, useState } from 'react';
+import type { ReactElement } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import LobbyAdminConfigScreen from './admin/lobby_admin_cfg';

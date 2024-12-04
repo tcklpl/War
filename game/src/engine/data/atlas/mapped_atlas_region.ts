@@ -1,5 +1,5 @@
 import { Vec2 } from '../vec/vec2';
-import { AtlasTreeNode } from './atlas_tree';
+import type { AtlasTreeNode } from './atlas_tree';
 
 export class MappedAtlasRegion {
     private readonly _size: Vec2;

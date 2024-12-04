@@ -1,7 +1,7 @@
 import { SkyboxShader } from '../../../../shaders/geometry/skybox/skybox_shader';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageSkybox implements RenderStage {
     private _shader!: SkyboxShader;

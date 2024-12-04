@@ -1,10 +1,10 @@
 import assetIndex from '../../asset_index.json';
 import { MissingAssetError } from '../../errors/engine/asset/missing_asset';
 import { BadGLTFFileError } from '../../errors/engine/gltf/bad_gltf_file';
-import { GLTFFile } from '../data/gltf/gltf_file';
-import { IDBConnector } from '../idb/idb_connector';
+import type { GLTFFile } from '../data/gltf/gltf_file';
+import type { IDBConnector } from '../idb/idb_connector';
 import { Manager } from '../manager';
-import { Asset } from './asset';
+import type { Asset } from './asset';
 import { AssetCache } from './cache/asset_cache';
 import { AssetType } from './cache/asset_type';
 import { CachedAssetKey } from './cache/cached_asset_key';
@@ -12,7 +12,8 @@ import { HDRCachedAsset } from './cache/hdr_cached_asset';
 import { GLTFAsset } from './gltf_asset';
 import { HDRAsset } from './hdr_asset';
 import { GLTFLoader } from './loaders/gltf_loader';
-import { HDRImageData, HDRLoader } from './loaders/hdr_loader';
+import type { HDRImageData } from './loaders/hdr_loader';
+import { HDRLoader } from './loaders/hdr_loader';
 
 type AssetIndex = typeof assetIndex;
 type GLTFAssetName = keyof AssetIndex['gltf'];

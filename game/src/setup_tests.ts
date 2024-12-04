@@ -1,7 +1,8 @@
 import * as matchers from '@testing-library/jest-dom/matchers';
 import { cleanup } from '@testing-library/react';
 import { useTranslation } from 'react-i18next';
-import { afterEach, beforeEach, expect, Mock } from 'vitest';
+import type { Mock } from 'vitest';
+import { afterEach, beforeEach, expect } from 'vitest';
 
 expect.extend(matchers);
 

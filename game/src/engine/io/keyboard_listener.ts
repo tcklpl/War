@@ -1,4 +1,4 @@
-import { Constructor } from 'typeUtils';
+import type { Constructor } from 'typeUtils';
 
 interface IKeyboardListener {
     onKeyDown(key: string, fn: () => void): void;

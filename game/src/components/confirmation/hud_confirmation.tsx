@@ -1,4 +1,5 @@
-import { ConfirmationRequestInfo, useConfirmation } from ':hooks/use_confirmation';
+import type { ConfirmationRequestInfo } from ':hooks/use_confirmation';
+import { useConfirmation } from ':hooks/use_confirmation';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Skeleton } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

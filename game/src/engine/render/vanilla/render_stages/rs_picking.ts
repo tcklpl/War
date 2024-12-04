@@ -4,11 +4,11 @@ import { MathUtils } from '../../../../utils/math_utils';
 import { Mat4 } from '../../../data/mat/mat4';
 import { PrimitiveDrawOptions } from '../../../data/meshes/primitive_draw_options';
 import { Texture } from '../../../data/texture/texture';
-import { Vec2 } from '../../../data/vec/vec2';
-import { Resolution } from '../../../resolution';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { Vec2 } from '../../../data/vec/vec2';
+import type { Resolution } from '../../../resolution';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStagePicking implements RenderStage {
     private _shader!: PickingShader;

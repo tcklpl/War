@@ -1,9 +1,9 @@
 import { PrincipledBSDFShader } from '../../../../shaders/geometry/principled_bsdf/principled_bsdf_shader';
 import { PrimitiveDrawOptions } from '../../../data/meshes/primitive_draw_options';
 import { SceneInfoBindGroupOptions } from '../../../data/scene/scene_info_bind_group_options';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageSolidGeometry implements RenderStage {
     private _principledShader!: PrincipledBSDFShader;

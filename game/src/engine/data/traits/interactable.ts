@@ -1,5 +1,5 @@
-import { Constructor } from 'typeUtils';
-import { IIdentifiable } from './identifiable';
+import type { Constructor } from 'typeUtils';
+import type { IIdentifiable } from './identifiable';
 
 export interface IInteractable {
     onMouseHover?(): void;

@@ -1,4 +1,4 @@
-import { GLBChunk, GLTFFileFormat } from 'gltf';
+import type { GLBChunk, GLTFFileFormat } from 'gltf';
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
 import { UnsupportedGLTFFeatureError } from '../../../errors/engine/gltf/unsupported_gltf_feature';
 import { FetchUtils } from '../../../utils/fetch_utils';
@@ -14,8 +14,9 @@ import { GLTFFile } from '../../data/gltf/gltf_file';
 import { GLTFLight } from '../../data/gltf/gltf_light';
 import { GLTFMaterial } from '../../data/gltf/gltf_material';
 import { GLTFMesh } from '../../data/gltf/gltf_mesh';
-import { GLTFMeshPrimitive } from '../../data/gltf/gltf_mesh_primitive';
-import { GLTFNode, GLTFNodeCamera, GLTFNodeLight, GLTFNodeMesh } from '../../data/gltf/gltf_node';
+import type { GLTFMeshPrimitive } from '../../data/gltf/gltf_mesh_primitive';
+import type { GLTFNode } from '../../data/gltf/gltf_node';
+import { GLTFNodeCamera, GLTFNodeLight, GLTFNodeMesh } from '../../data/gltf/gltf_node';
 import { GLTFScene } from '../../data/gltf/gltf_scene';
 
 /**

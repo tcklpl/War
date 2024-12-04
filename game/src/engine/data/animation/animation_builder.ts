@@ -1,6 +1,6 @@
-import { Animatable } from './animatable';
+import type { Animatable } from './animatable';
 import { Animation } from './animation';
-import { AnimationStep } from './state/animation_step';
+import type { AnimationStep } from './state/animation_step';
 import { FrameZeroAnimationStep } from './state/frame_zero_animation_step';
 import { FrameZeroCurrent } from './state/frame_zero_current';
 

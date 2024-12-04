@@ -1,5 +1,5 @@
-import { CachedAssetIDBInterface } from './cached_asset_idb_interface';
-import { CachedAssetKey } from './cached_asset_key';
+import type { CachedAssetIDBInterface } from './cached_asset_idb_interface';
+import type { CachedAssetKey } from './cached_asset_key';
 
 export class CachedAsset {
     constructor(

@@ -1,4 +1,4 @@
-import { ClientToServerPackets } from ':protocol';
+import type { ClientToServerPackets } from ':protocol';
 
 type ClientPacketEventNames = keyof ClientToServerPackets;
 type ClientPacketEventParams<Event extends ClientPacketEventNames> = Parameters<ClientToServerPackets[Event]>;

@@ -1,12 +1,12 @@
-import { LobbyListState, ReconnectionStatus } from ':protocol';
-import { WarGameLobby } from '../lobby/war_game_lobby';
-import { WarGameSession } from '../lobby/war_game_session';
+import type { LobbyListState, ReconnectionStatus } from ':protocol';
+import type { WarGameLobby } from '../lobby/war_game_lobby';
+import type { WarGameSession } from '../lobby/war_game_session';
 import { registerPacketListeners } from './connection/packet/listeners/packet_listeners';
 import { ClientPacketReconnectToGame } from './connection/packet/to_send/ingame/reconnect';
 import { ClientPacketCreateLobby } from './connection/packet/to_send/lobby_list/create_lobby';
 import { ClientPacketJoinLobby } from './connection/packet/to_send/lobby_list/join_lobby';
 import { ClientPacketRequireLobbies } from './connection/packet/to_send/lobby_list/req_lobbies';
-import { ServerConnection } from './connection/server_connection';
+import type { ServerConnection } from './connection/server_connection';
 
 export type LobbyExitReason = 'left' | 'kicked' | 'room closed' | '';
 

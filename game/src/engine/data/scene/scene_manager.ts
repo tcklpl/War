@@ -1,5 +1,5 @@
 import { Manager } from '../../manager';
-import { Scene } from './scene';
+import type { Scene } from './scene';
 
 export class SceneManager extends Manager<Scene> {
     activeScene?: Scene;

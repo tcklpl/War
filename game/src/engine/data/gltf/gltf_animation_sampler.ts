@@ -1,5 +1,5 @@
-import { GLTFAnimationSamplerInterpolation } from 'gltf';
-import { GLTFAccessor } from './gltf_accessor';
+import type { GLTFAnimationSamplerInterpolation } from 'gltf';
+import type { GLTFAccessor } from './gltf_accessor';
 
 export class GLTFAnimationSampler {
     constructor(

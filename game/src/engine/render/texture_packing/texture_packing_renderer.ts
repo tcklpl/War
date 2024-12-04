@@ -1,4 +1,4 @@
-import { Shader } from '../../../shaders/shader';
+import type { Shader } from '../../../shaders/shader';
 import { TexturePackerVec3f32Shader } from '../../../shaders/util/texture_packer/texture_packer_vec3_f32_shader';
 import { TexturePackerVec4Shader } from '../../../shaders/util/texture_packer/texture_packer_vec4_shader';
 import { Texture } from '../../data/texture/texture';

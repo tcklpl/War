@@ -1,15 +1,15 @@
 import { Float16Array } from '@petamoriken/float16';
 import { SSAOBlurShader } from '../../../../shaders/post/ssao/ssao_blur_shader';
 import { SSAOShader } from '../../../../shaders/post/ssao/ssao_shader';
-import { Shader } from '../../../../shaders/shader';
+import type { Shader } from '../../../../shaders/shader';
 import { BufferUtils } from '../../../../utils/buffer_utils';
 import { MathUtils } from '../../../../utils/math_utils';
 import { Mat4 } from '../../../data/mat/mat4';
 import { Vec2 } from '../../../data/vec/vec2';
 import { Vec3 } from '../../../data/vec/vec3';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageSSAO implements RenderStage {
     private readonly _bias = 0.0025;

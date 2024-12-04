@@ -1,6 +1,7 @@
 import { MathUtils } from '../../../utils/math_utils';
 import { Vec3 } from '../vec/vec3';
-import { Light, LightProperties } from './light';
+import type { LightProperties } from './light';
+import { Light } from './light';
 
 export class PointLight extends Light {
     constructor(props: LightProperties, enabled: boolean = true) {

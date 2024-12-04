@@ -1,6 +1,6 @@
 import { BufferUtils } from '../../../utils/buffer_utils';
 import { MathUtils } from '../../../utils/math_utils';
-import { Animatable, AnimationInterpolation, EncodedAnimationTarget } from '../animation/animatable';
+import type { Animatable, AnimationInterpolation, EncodedAnimationTarget } from '../animation/animatable';
 import { Mat4 } from '../mat/mat4';
 import { Quaternion } from '../quaternion/quaternion';
 import { Vec3 } from '../vec/vec3';

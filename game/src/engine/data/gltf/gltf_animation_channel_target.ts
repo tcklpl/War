@@ -1,5 +1,5 @@
-import { GLTFAnimationChannelTargetPath } from 'gltf';
-import { GLTFNode } from './gltf_node';
+import type { GLTFAnimationChannelTargetPath } from 'gltf';
+import type { GLTFNode } from './gltf_node';
 
 export class GLTFAnimationChannelTarget {
     constructor(

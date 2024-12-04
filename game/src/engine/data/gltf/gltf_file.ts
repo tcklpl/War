@@ -1,5 +1,5 @@
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
-import { GLTFScene } from './gltf_scene';
+import type { GLTFScene } from './gltf_scene';
 
 interface GLTFAssetInfo {
     generator: string;

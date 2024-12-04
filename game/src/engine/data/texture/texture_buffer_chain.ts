@@ -1,4 +1,4 @@
-import { Vec2 } from '../vec/vec2';
+import type { Vec2 } from '../vec/vec2';
 import { Texture } from './texture';
 
 export class TextureBufferChain {

@@ -1,5 +1,5 @@
-import { Quaternion } from '../quaternion/quaternion';
-import { Vec3 } from '../vec/vec3';
+import type { Quaternion } from '../quaternion/quaternion';
+import type { Vec3 } from '../vec/vec3';
 
 export type AnimationValue = number | Vec3 | Quaternion;
 export type AnimationInterpolation = 'step' | 'linear';

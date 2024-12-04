@@ -1,6 +1,6 @@
 import { identifiable } from '../traits/identifiable';
 import { FrameListenerMatrixTransformative } from './frame_listener_matrix_transformative';
-import { MatrixTransformative } from './matrix_transformative';
+import type { MatrixTransformative } from './matrix_transformative';
 
 const EntityBase = identifiable(FrameListenerMatrixTransformative);
 

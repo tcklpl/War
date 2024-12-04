@@ -1,4 +1,5 @@
-import { GLTFNode, GLTFNodeCamera, GLTFNodeLight, GLTFNodeMesh } from './gltf_node';
+import type { GLTFNode } from './gltf_node';
+import { GLTFNodeCamera, GLTFNodeLight, GLTFNodeMesh } from './gltf_node';
 
 export class GLTFScene {
     private readonly _name: string;

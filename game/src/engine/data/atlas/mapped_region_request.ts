@@ -1,4 +1,4 @@
-import { MappedRegionSize } from './mapped_region_size';
+import type { MappedRegionSize } from './mapped_region_size';
 
 export interface MappedRegionRequest {
     preferredSize: MappedRegionSize;

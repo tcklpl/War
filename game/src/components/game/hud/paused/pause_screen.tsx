@@ -10,7 +10,8 @@ import {
     alpha,
     useTheme,
 } from '@mui/material';
-import { FunctionComponent, useEffect, useState } from 'react';
+import type { FunctionComponent } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './pause_screen.scss';
 

@@ -1,5 +1,5 @@
-import { SvgIconProps } from '@mui/material';
-import { FunctionComponent } from 'react';
+import type { SvgIconProps } from '@mui/material';
+import type { FunctionComponent } from 'react';
 
 import CustomIcon from '../custom_icon';
 import IconSrc from './dragon.svg?react';

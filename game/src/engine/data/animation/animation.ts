@@ -1,8 +1,8 @@
 import { InvalidAnimationTargetError } from '../../../errors/engine/data/animation/invalid_animation_target';
-import { Animatable } from './animatable';
+import type { Animatable } from './animatable';
 import { AnimationPlayback } from './animation_playback';
-import { OffsetEncodedAnimationTarget } from './offset_encoded_animation_target';
-import { AnimationStep } from './state/animation_step';
+import type { OffsetEncodedAnimationTarget } from './offset_encoded_animation_target';
+import type { AnimationStep } from './state/animation_step';
 import { FrameZeroCurrent } from './state/frame_zero_current';
 
 export class Animation<T extends Animatable> {

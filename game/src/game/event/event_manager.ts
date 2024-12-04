@@ -1,4 +1,4 @@
-import { GameEvents } from './game_events';
+import type { GameEvents } from './game_events';
 
 type GameEvent = keyof GameEvents;
 

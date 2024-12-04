@@ -1,5 +1,5 @@
 import { Manager } from '../../manager';
-import { Material } from './material';
+import type { Material } from './material';
 
 export class MaterialManager extends Manager<Material> {
     private _materialId = 0;

@@ -1,4 +1,4 @@
-import { Constructor } from 'typeUtils';
+import type { Constructor } from 'typeUtils';
 
 export interface IFrameListener {
     onEachFrame?(deltaTime: number): void;

@@ -1,7 +1,7 @@
 import { DuplicateAnimationDeltasError } from '../../../../errors/engine/data/animation/duplicate_animation_deltas';
-import { Animatable, EncodedAnimationTarget } from '../animatable';
-import { Animation } from '../animation';
-import { AnimationBuilder } from '../animation_builder';
+import type { Animatable, EncodedAnimationTarget } from '../animatable';
+import type { Animation } from '../animation';
+import type { AnimationBuilder } from '../animation_builder';
 
 export class AnimationStep<T extends Animatable> {
     private _offset = 0;

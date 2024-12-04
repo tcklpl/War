@@ -1,4 +1,4 @@
-import { Mouse } from '../mouse';
+import type { Mouse } from '../mouse';
 
 export class MouseInteractionManager {
     constructor(private readonly _mouse: Mouse) {

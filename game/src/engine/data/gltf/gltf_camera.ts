@@ -1,4 +1,4 @@
-import { GLTFCameraTypes } from 'gltf';
+import type { GLTFCameraTypes } from 'gltf';
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
 import { InvalidGLTFProperty } from '../../../errors/engine/gltf/invalid_gltf_property';
 

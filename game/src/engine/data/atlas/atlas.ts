@@ -3,7 +3,7 @@ import { Texture } from '../texture/texture';
 import { Vec2 } from '../vec/vec2';
 import { AtlasTree } from './atlas_tree';
 import { MappedAtlasRegion } from './mapped_atlas_region';
-import { MappedRegionRequest } from './mapped_region_request';
+import type { MappedRegionRequest } from './mapped_region_request';
 import { MappedRegionSize } from './mapped_region_size';
 
 export class Atlas {

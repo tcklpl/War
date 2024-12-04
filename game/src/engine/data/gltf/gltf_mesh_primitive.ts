@@ -1,5 +1,5 @@
-import { GLTFAccessor } from './gltf_accessor';
-import { GLTFMaterial } from './gltf_material';
+import type { GLTFAccessor } from './gltf_accessor';
+import type { GLTFMaterial } from './gltf_material';
 
 export interface GLTFMeshPrimitive {
     attributes: {

@@ -1,6 +1,6 @@
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
 import { BufferUtils } from '../../../utils/buffer_utils';
-import { GLTFBuffer } from './gltf_buffer';
+import type { GLTFBuffer } from './gltf_buffer';
 
 export class GLTFBufferView {
     private readonly ARRAY_BUFFER = 34962;

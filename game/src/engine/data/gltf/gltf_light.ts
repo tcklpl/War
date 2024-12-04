@@ -1,4 +1,4 @@
-import { KHR_lights_punctual_Types } from 'gltf';
+import type { KHR_lights_punctual_Types } from 'gltf';
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
 import { InvalidGLTFProperty } from '../../../errors/engine/gltf/invalid_gltf_property';
 

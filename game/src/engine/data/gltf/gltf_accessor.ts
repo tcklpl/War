@@ -1,6 +1,6 @@
-import { GLTFAccessorValidTypes } from 'gltf';
+import type { GLTFAccessorValidTypes } from 'gltf';
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
-import { GLTFBufferView } from './gltf_buffer_view';
+import type { GLTFBufferView } from './gltf_buffer_view';
 
 export class GLTFAccessor {
     private readonly FLOAT = 5126;

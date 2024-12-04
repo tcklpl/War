@@ -1,4 +1,4 @@
-import { RenderResourcePool } from './render_resource_pool';
+import type { RenderResourcePool } from './render_resource_pool';
 
 export interface RenderInitializationResources {
     canvasPreferredTextureFormat: GPUTextureFormat;

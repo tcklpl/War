@@ -1,8 +1,8 @@
 import { PrepassShader } from '../../../../shaders/geometry/prepass/prepass_shader';
 import { PrimitiveDrawOptions } from '../../../data/meshes/primitive_draw_options';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStagePrePass implements RenderStage {
     private _prepassShader!: PrepassShader;

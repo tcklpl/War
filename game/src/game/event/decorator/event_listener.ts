@@ -1,4 +1,4 @@
-import { GameEvents } from '../game_events';
+import type { GameEvents } from '../game_events';
 
 export function EventListener(event: keyof GameEvents) {
     return (_target: any, _propertyKey: string, descriptor: PropertyDescriptor) => {

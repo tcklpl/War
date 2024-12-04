@@ -1,4 +1,4 @@
-import { LobbyListStateLobby } from ':protocol';
+import type { LobbyListStateLobby } from ':protocol';
 import { Card, CardContent, Typography } from '@mui/material';
 import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

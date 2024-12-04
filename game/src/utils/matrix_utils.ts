@@ -1,4 +1,4 @@
-import { Mat4 } from ':engine/data/mat/mat4';
+import type { Mat4 } from ':engine/data/mat/mat4';
 import { Vec4 } from ':engine/data/vec/vec4';
 
 export class MatrixUtils {

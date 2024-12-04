@@ -1,8 +1,8 @@
 import { PFXTonemapShader } from '../../../../shaders/post/pfx_tone_mapping/pfx_tone_mapping_shader';
 import { BufferUtils } from '../../../../utils/buffer_utils';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStagePFXToneMapping implements RenderStage {
     private _shader!: PFXTonemapShader;

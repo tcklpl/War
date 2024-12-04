@@ -1,8 +1,8 @@
 import { BadPipelineError } from '../../../errors/engine/render/bad_pipeline';
-import { ConfigGraphics } from '../../config/cfg_graphics';
-import { RenderInitializationResources } from './render_initialization_resources';
-import { RenderResourcePool } from './render_resource_pool';
-import { RenderStage } from './render_stages/render_stage';
+import type { ConfigGraphics } from '../../config/cfg_graphics';
+import type { RenderInitializationResources } from './render_initialization_resources';
+import type { RenderResourcePool } from './render_resource_pool';
+import type { RenderStage } from './render_stages/render_stage';
 import { RenderStageBloom } from './render_stages/rs_bloom';
 import { RenderStageEnvironment } from './render_stages/rs_environment';
 import { RenderStageExposureCalculation } from './render_stages/rs_exposure_calculation';

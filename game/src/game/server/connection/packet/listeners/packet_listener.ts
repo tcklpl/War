@@ -1,5 +1,5 @@
-import { GameSocket } from '../../../../../@types/socket';
-import { WarServer } from '../../../war_server';
+import type { GameSocket } from '../../../../../@types/socket';
+import type { WarServer } from '../../../war_server';
 
 export abstract class PacketListener {
     constructor(

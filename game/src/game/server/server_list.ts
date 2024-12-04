@@ -1,5 +1,5 @@
-import { IDBConnector } from ':engine/idb/idb_connector';
-import { ServerListSelectInfo } from './server_list_select_info';
+import type { IDBConnector } from ':engine/idb/idb_connector';
+import type { ServerListSelectInfo } from './server_list_select_info';
 import { ServerListStorage } from './server_list_storage';
 
 export class ServerList {

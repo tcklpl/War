@@ -1,4 +1,4 @@
-import { EncodedAnimationTarget } from './animatable';
+import type { EncodedAnimationTarget } from './animatable';
 
 export interface OffsetEncodedAnimationTarget {
     offset: number;

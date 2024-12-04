@@ -1,4 +1,4 @@
-import { ReconnectionStatus } from ':protocol';
+import type { ReconnectionStatus } from ':protocol';
 import { ClientPacket } from '../../client_packet';
 
 export class ClientPacketReconnectToGame extends ClientPacket<'gReconnectToGame'> {

@@ -1,6 +1,7 @@
 import GavelIcon from '@mui/icons-material/Gavel';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
-import { FunctionComponent, useEffect, useState } from 'react';
+import type { FunctionComponent } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import style from './legal_disclaimer_screen.module.scss';
 

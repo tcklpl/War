@@ -1,10 +1,10 @@
 import { BadGLTFFileError } from '../../../errors/engine/gltf/bad_gltf_file';
 import { Quaternion } from '../quaternion/quaternion';
 import { Vec3 } from '../vec/vec3';
-import { GLTFAnimation } from './gltf_animation';
-import { GLTFCamera } from './gltf_camera';
-import { GLTFLight } from './gltf_light';
-import { GLTFMesh } from './gltf_mesh';
+import type { GLTFAnimation } from './gltf_animation';
+import type { GLTFCamera } from './gltf_camera';
+import type { GLTFLight } from './gltf_light';
+import type { GLTFMesh } from './gltf_mesh';
 
 export abstract class GLTFNode {
     private readonly _name: string;

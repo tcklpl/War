@@ -1,16 +1,16 @@
 import { BufferUtils } from '../../../utils/buffer_utils';
 import { MathUtils } from '../../../utils/math_utils';
 import { ShadowMapAtlas } from '../../data/atlas/shadow_map_atlas';
-import { LuminanceHistogram } from '../../data/histogram/luminance_histogram';
+import type { LuminanceHistogram } from '../../data/histogram/luminance_histogram';
 import { Mat4 } from '../../data/mat/mat4';
-import { Scene } from '../../data/scene/scene';
+import type { Scene } from '../../data/scene/scene';
 import { Texture } from '../../data/texture/texture';
 import { TextureBufferChain } from '../../data/texture/texture_buffer_chain';
 import { Vec2 } from '../../data/vec/vec2';
 import { Vec3 } from '../../data/vec/vec3';
-import { Resolution } from '../../resolution';
-import { RenderPostEffects } from './render_post_effects';
-import { RenderProjection } from './render_projection';
+import type { Resolution } from '../../resolution';
+import type { RenderPostEffects } from './render_post_effects';
+import type { RenderProjection } from './render_projection';
 
 export class RenderResourcePool {
     private readonly _hdrTextureFormat: GPUTextureFormat = 'rgba16float';

@@ -1,7 +1,7 @@
-import { MappedAtlasRegion } from '../atlas/mapped_atlas_region';
-import { MappedRegionSize } from '../atlas/mapped_region_size';
-import { Mat4 } from '../mat/mat4';
-import { Vec3 } from '../vec/vec3';
+import type { MappedAtlasRegion } from '../atlas/mapped_atlas_region';
+import type { MappedRegionSize } from '../atlas/mapped_region_size';
+import type { Mat4 } from '../mat/mat4';
+import type { Vec3 } from '../vec/vec3';
 
 export interface LightProperties {
     name: string;

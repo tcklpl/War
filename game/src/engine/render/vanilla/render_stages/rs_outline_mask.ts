@@ -1,9 +1,9 @@
 import { EntityFlag } from ':engine/data/entity/entity_flag';
 import { PrimitiveDrawOptions } from ':engine/data/meshes/primitive_draw_options';
 import { OutlineMaskShader } from '../../../../shaders/post/outline/outline_mask_shader';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageOutlineMask implements RenderStage {
     private _outlineMaskShader!: OutlineMaskShader;

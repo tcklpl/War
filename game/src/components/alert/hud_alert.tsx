@@ -1,4 +1,5 @@
-import { IAlertInfo, useAlert } from ':hooks/use_alert';
+import type { IAlertInfo } from ':hooks/use_alert';
+import { useAlert } from ':hooks/use_alert';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

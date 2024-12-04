@@ -1,6 +1,6 @@
 import { BindDeletedMeshPrimitiveError } from '../../../errors/engine/data/bind_deleted_mesh_primitive';
-import { Material } from '../material/material';
-import { PrimitiveDrawOptions } from './primitive_draw_options';
+import type { Material } from '../material/material';
+import type { PrimitiveDrawOptions } from './primitive_draw_options';
 
 type PrimitiveBuffers = {
     positions: GPUBuffer;

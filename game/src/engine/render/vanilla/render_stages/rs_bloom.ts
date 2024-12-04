@@ -1,9 +1,9 @@
 import { BloomDownsampleShader } from '../../../../shaders/post/bloom/bloom_downsample_shader';
 import { BloomUpsampleShader } from '../../../../shaders/post/bloom/bloom_upsample_shader';
-import { Shader } from '../../../../shaders/shader';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { Shader } from '../../../../shaders/shader';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageBloom implements RenderStage {
     private _downsampleShader!: BloomDownsampleShader;

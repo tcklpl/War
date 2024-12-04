@@ -1,12 +1,13 @@
 import { EventListener } from ':game/event/decorator/event_listener';
-import { type GamePauseReason, InitialGameStatePacket } from ':protocol';
+import type { InitialGameStatePacket } from ':protocol';
+import { type GamePauseReason } from ':protocol';
 import { ClientPacketGMoveOn } from '../server/connection/packet/to_send/ingame/move_on';
 import { ClientPacketGPause } from '../server/connection/packet/to_send/ingame/pause';
 import { ClientPacketPing } from '../server/connection/packet/to_send/ingame/ping';
 import { ClientPacketGResume } from '../server/connection/packet/to_send/ingame/resume';
 import { ClientPacketGSave } from '../server/connection/packet/to_send/ingame/save';
 import { ClientPacketGSaveAndQuit } from '../server/connection/packet/to_send/ingame/save_and_quit';
-import { ReconnectionInfo } from '../server/connection/reconnection_info';
+import type { ReconnectionInfo } from '../server/connection/reconnection_info';
 
 export class WarGameSession {
     private _ping = 0;

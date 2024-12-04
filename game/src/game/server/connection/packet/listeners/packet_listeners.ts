@@ -1,5 +1,5 @@
-import { GameSocket } from '../../../../../@types/socket';
-import { WarServer } from '../../../war_server';
+import type { GameSocket } from '../../../../../@types/socket';
+import type { WarServer } from '../../../war_server';
 import { PLInitialGameState } from './game/pl_initial_game_state';
 import { PLChat } from './lobby/pl_chat';
 import { PLGameStartCancelled } from './lobby/pl_game_start_cancelled';

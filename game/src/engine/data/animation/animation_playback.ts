@@ -2,9 +2,9 @@ import { FailedToGetNearestKeyframesError } from '../../../errors/engine/data/an
 import { InvalidAnimationTargetError } from '../../../errors/engine/data/animation/invalid_animation_target';
 import { InvalidInterpolationTypeError } from '../../../errors/engine/data/animation/invalid_interpolation_type';
 import { AnimationUtils } from '../../../utils/animation_utils';
-import { Animatable, AnimationValue, EncodedAnimationTarget } from './animatable';
-import { Animation } from './animation';
-import { OffsetEncodedAnimationTarget } from './offset_encoded_animation_target';
+import type { Animatable, AnimationValue, EncodedAnimationTarget } from './animatable';
+import type { Animation } from './animation';
+import type { OffsetEncodedAnimationTarget } from './offset_encoded_animation_target';
 
 export class AnimationPlayback<T extends Animatable> {
     private readonly _initialState = new Map<string, EncodedAnimationTarget>();

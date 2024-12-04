@@ -13,7 +13,7 @@ import {
 import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { URLUtils } from '../../../utils/url_utils';
-import { ServerListEntry } from './server_list_entry';
+import type { ServerListEntry } from './server_list_entry';
 import './server_select.scss';
 
 const ServerSelectAddServerScreen: React.FC<{

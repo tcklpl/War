@@ -1,8 +1,8 @@
-import { IDBConnector } from '../../idb/idb_connector';
+import type { IDBConnector } from '../../idb/idb_connector';
 import { IDBController } from '../../idb/idb_controller';
-import { CachedAsset } from './cached_asset';
-import { CachedAssetIDBInterface } from './cached_asset_idb_interface';
-import { CachedAssetKey } from './cached_asset_key';
+import type { CachedAsset } from './cached_asset';
+import type { CachedAssetIDBInterface } from './cached_asset_idb_interface';
+import type { CachedAssetKey } from './cached_asset_key';
 
 export class AssetCache extends IDBController<CachedAssetIDBInterface> {
     constructor(connection: IDBConnector) {

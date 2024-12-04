@@ -1,4 +1,4 @@
-import { Animatable } from './animatable';
+import type { Animatable } from './animatable';
 import { AnimationObjectPuppeteer } from './animation_object_puppeteer';
 
 export class Orchestrator {

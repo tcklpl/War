@@ -1,7 +1,8 @@
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Button, Grid2, Stack, useTheme } from '@mui/material';
-import React, { ReactNode, useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
+import React, { useEffect, useState } from 'react';
 import CfgScreen from '../../../menu/config/screen/cfg_screen';
 import style from './esc_menu.module.scss';
 

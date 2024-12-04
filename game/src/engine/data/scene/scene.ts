@@ -1,8 +1,8 @@
-import { Camera } from '../camera/camera';
-import { Entity } from '../entity/entity';
-import { Light } from '../lights/light';
+import type { Camera } from '../camera/camera';
+import type { Entity } from '../entity/entity';
+import type { Light } from '../lights/light';
 import { BlackSkybox } from '../skybox/black_skybox';
-import { Skybox } from '../skybox/skybox';
+import type { Skybox } from '../skybox/skybox';
 import { SceneInfo } from './scene_info';
 
 export class Scene {

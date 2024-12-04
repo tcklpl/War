@@ -1,5 +1,5 @@
 import { IllegalOperationError } from '../../../../errors/generic/illegal_operation_error';
-import { Animatable } from '../animatable';
+import type { Animatable } from '../animatable';
 import { AnimationStep } from './animation_step';
 
 export class FrameZeroAnimationStep<T extends Animatable> extends AnimationStep<T> {

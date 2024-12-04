@@ -1,5 +1,5 @@
 import { Manager } from '../../manager';
-import { Camera } from './camera';
+import type { Camera } from './camera';
 
 export class CameraManager extends Manager<Camera> {
     private _active?: Camera;

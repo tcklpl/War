@@ -1,6 +1,6 @@
-import { Constructor } from 'typeUtils';
-import { Animatable } from '../animation/animatable';
-import { AnimationObjectPuppeteer } from '../animation/animation_object_puppeteer';
+import type { Constructor } from 'typeUtils';
+import type { Animatable } from '../animation/animatable';
+import type { AnimationObjectPuppeteer } from '../animation/animation_object_puppeteer';
 
 export interface IPuppet<T extends Animatable> {
     get puppeteer(): AnimationObjectPuppeteer<T>;

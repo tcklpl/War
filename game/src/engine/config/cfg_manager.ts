@@ -1,9 +1,9 @@
-import { IDBConnector } from '../idb/idb_connector';
+import type { IDBConnector } from '../idb/idb_connector';
 import { IDBController } from '../idb/idb_controller';
 import { ConfigDisplay } from './cfg_display';
 import { ConfigGame } from './cfg_game';
 import { ConfigGraphics } from './cfg_graphics';
-import { ConfigPage } from './cfg_page';
+import type { ConfigPage } from './cfg_page';
 import { ConfigSession } from './cfg_session';
 
 export class ConfigManager extends IDBController<ConfigPage> {

@@ -1,7 +1,7 @@
 import { AnimationUtils } from '../../../utils/animation_utils';
-import { Animatable } from './animatable';
-import { Animation } from './animation';
-import { AnimationPlayback } from './animation_playback';
+import type { Animatable } from './animatable';
+import type { Animation } from './animation';
+import type { AnimationPlayback } from './animation_playback';
 
 export class AnimationObjectPuppeteer<T extends Animatable> {
     private _playbacks: AnimationPlayback<T>[] = [];

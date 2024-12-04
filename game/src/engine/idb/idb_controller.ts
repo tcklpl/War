@@ -1,4 +1,4 @@
-import { IDBConnector } from './idb_connector';
+import type { IDBConnector } from './idb_connector';
 
 export interface IDBControllerInfo {
     name: string;

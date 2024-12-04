@@ -1,7 +1,7 @@
 import { OutlineShader } from '../../../../shaders/post/outline/outline_shader';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageOutline implements RenderStage {
     private _outlineShader!: OutlineShader;

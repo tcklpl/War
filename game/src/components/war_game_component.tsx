@@ -1,5 +1,6 @@
 import { useConfig } from ':hooks/use_config';
-import { CssBaseline, Theme, ThemeProvider } from '@mui/material';
+import type { Theme } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { SnackbarProvider } from 'notistack';
 import React, { useEffect, useState } from 'react';
 import themeDefaultDark from '../style/themes/default_dark';

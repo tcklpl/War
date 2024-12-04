@@ -1,5 +1,5 @@
-import { HDRImageData } from ':engine/asset/loaders/hdr_loader';
-import { Vec4 } from ':engine/data/vec/vec4';
+import type { HDRImageData } from ':engine/asset/loaders/hdr_loader';
+import type { Vec4 } from ':engine/data/vec/vec4';
 import { Float16Array } from '@petamoriken/float16';
 
 export class TextureUtils {

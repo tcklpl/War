@@ -2,16 +2,16 @@ import { DepthShader } from '../../../../shaders/geometry/depth/depth_shader';
 import { BufferUtils } from '../../../../utils/buffer_utils';
 import { MathUtils } from '../../../../utils/math_utils';
 import { MatrixUtils } from '../../../../utils/matrix_utils';
-import { Camera } from '../../../data/camera/camera';
+import type { Camera } from '../../../data/camera/camera';
 import { DirectionalLight } from '../../../data/lights/directional_light';
 import { Mat4 } from '../../../data/mat/mat4';
 import { PrimitiveDrawOptions } from '../../../data/meshes/primitive_draw_options';
 import { Vec3 } from '../../../data/vec/vec3';
 import { Vec4 } from '../../../data/vec/vec4';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderProjection } from '../render_projection';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderProjection } from '../render_projection';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageLights implements RenderStage {
     private readonly _zMult = 1;

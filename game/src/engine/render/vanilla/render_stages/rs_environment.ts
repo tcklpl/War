@@ -1,11 +1,11 @@
 import { EnvironmentShader } from '../../../../shaders/post/environment/environment_shader';
 import { BufferUtils } from '../../../../utils/buffer_utils';
-import { Camera } from '../../../data/camera/camera';
+import type { Camera } from '../../../data/camera/camera';
 import { Mat4 } from '../../../data/mat/mat4';
 import { SceneInfoBindGroupOptions } from '../../../data/scene/scene_info_bind_group_options';
-import { RenderInitializationResources } from '../render_initialization_resources';
-import { RenderResourcePool } from '../render_resource_pool';
-import { RenderStage } from './render_stage';
+import type { RenderInitializationResources } from '../render_initialization_resources';
+import type { RenderResourcePool } from '../render_resource_pool';
+import type { RenderStage } from './render_stage';
 
 export class RenderStageEnvironment implements RenderStage {
     private _shader!: EnvironmentShader;

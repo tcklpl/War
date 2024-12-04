@@ -1,9 +1,9 @@
 import { BufferUtils } from '../../../utils/buffer_utils';
 import { DirectionalLight } from '../lights/directional_light';
-import { Light } from '../lights/light';
+import type { Light } from '../lights/light';
 import { PointLight } from '../lights/point_light';
-import { Skybox } from '../skybox/skybox';
-import { SceneInfoBindGroupOptions } from './scene_info_bind_group_options';
+import type { Skybox } from '../skybox/skybox';
+import type { SceneInfoBindGroupOptions } from './scene_info_bind_group_options';
 
 export class SceneInfo {
     private readonly _lights: Light[];

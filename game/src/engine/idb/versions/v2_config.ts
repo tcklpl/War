@@ -1,4 +1,4 @@
-import { IDBDBVersion } from './idb_db_version';
+import type { IDBDBVersion } from './idb_db_version';
 
 export class IDBv2Config implements IDBDBVersion {
     version = 2;

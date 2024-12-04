@@ -1,6 +1,6 @@
 import { Mesh } from '../meshes/mesh';
 import { Primitive } from '../meshes/primitive';
-import { GLTFMeshPrimitive } from './gltf_mesh_primitive';
+import type { GLTFMeshPrimitive } from './gltf_mesh_primitive';
 
 export class GLTFMesh {
     private readonly _name: string;

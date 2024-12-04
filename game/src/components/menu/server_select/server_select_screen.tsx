@@ -38,7 +38,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import SendIcon from '@mui/icons-material/Send';
 import { UsernameNotAvailableError } from '../../../errors/game/connection/username_not_available';
 import { WrongPasswordError } from '../../../errors/game/connection/wrong_password';
-import { ServerListEntry } from './server_list_entry';
+import type { ServerListEntry } from './server_list_entry';
 
 const ServerSelectScreen: React.FC = () => {
     const { palette } = useTheme();

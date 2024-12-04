@@ -1,4 +1,4 @@
-import { Constructor } from 'typeUtils';
+import type { Constructor } from 'typeUtils';
 
 export interface IIdentifiable {
     get id(): number;

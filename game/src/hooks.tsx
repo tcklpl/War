@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { AlertProvider } from './hooks/use_alert';
 import { ConfirmationProvider } from './hooks/use_confirmation';
 import { GameProvider } from './hooks/use_game';

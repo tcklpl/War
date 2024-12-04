@@ -1,4 +1,4 @@
-import { AssetType } from './asset_type';
+import type { AssetType } from './asset_type';
 
 export class CachedAssetKey {
     constructor(

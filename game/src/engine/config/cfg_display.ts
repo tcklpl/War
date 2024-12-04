@@ -1,4 +1,4 @@
-import { ConfigPage } from './cfg_page';
+import type { ConfigPage } from './cfg_page';
 
 export class ConfigDisplay implements ConfigPage {
     page = 'display';

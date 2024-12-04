@@ -1,12 +1,12 @@
-import { GamePauseReason, LobbyListState, LobbyState } from ':protocol';
-import React from 'react';
-import { LobbyChatMessage } from './lobby/lobby_chat';
-import { WarGameLobby } from './lobby/war_game_lobby';
-import { WarGameSession } from './lobby/war_game_session';
-import { ReconnectionInfo } from './server/connection/reconnection_info';
-import { ServerConnection } from './server/connection/server_connection';
-import { LobbyExitReason } from './server/war_server';
-import { WarGame } from './war_game';
+import type { GamePauseReason, LobbyListState, LobbyState } from ':protocol';
+import type React from 'react';
+import type { LobbyChatMessage } from './lobby/lobby_chat';
+import type { WarGameLobby } from './lobby/war_game_lobby';
+import type { WarGameSession } from './lobby/war_game_session';
+import type { ReconnectionInfo } from './server/connection/reconnection_info';
+import type { ServerConnection } from './server/connection/server_connection';
+import type { LobbyExitReason } from './server/war_server';
+import type { WarGame } from './war_game';
 
 type Dispatcher<T> = React.Dispatch<React.SetStateAction<T>>;
 type UndefinedDispatcher<T> = React.Dispatch<React.SetStateAction<T | undefined>>;

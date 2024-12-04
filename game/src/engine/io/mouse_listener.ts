@@ -1,5 +1,5 @@
-import { Constructor } from 'typeUtils';
-import { Vec2 } from '../data/vec/vec2';
+import type { Constructor } from 'typeUtils';
+import type { Vec2 } from '../data/vec/vec2';
 
 export interface IMouseListener {
     onMouseMove?(position: Vec2): void;
