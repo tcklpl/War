@@ -17,6 +17,7 @@
     "allowImportingTsExtensions": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "verbatimModuleSyntax": true,
     "jsx": "react-jsx",
     "types": ["@webgpu/types", "@testing-library/jest-dom", "vite-plugin-svgr/client", "vitest/globals"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
