@@ -21,6 +21,17 @@ Icons:
 - 🔩 Dev-related.
 - ⬆️ Package or dependency update.
 
+## [Unreleased]
+
+### ✨ New
+
+- 🎮 Game now has animations in the UI.
+- 🎮🔩 Created a Game event system.
+
+### 🔧 Changed
+
+- 🎮🔩 Updated game to use `verbatimModuleSyntax`.
+
 ## [0.5.0] - 2024-12-01
 
 ### ✨ New
