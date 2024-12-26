@@ -2,6 +2,6 @@ import { BoardCountry } from '../board_country';
 
 export class BCCuba extends BoardCountry {
     constructor() {
-        super('Cuba', 'Cuba');
+        super('Cuba', 'Cuba', 'cuba');
     }
 }

@@ -4,6 +4,7 @@ import { EntityFlag } from ':engine/data/entity/entity_flag';
 import { PointLight } from ':engine/data/lights/point_light';
 import { interactable } from ':engine/data/traits/interactable';
 import { Vec3 } from ':engine/data/vec/vec3';
+import type { TerritoryCode } from ':protocol';
 import { MissingAssetError } from '../../errors/engine/asset/missing_asset';
 import {
     BoardCountryAnimationHoverOn,
@@ -35,12 +36,13 @@ export class BoardCountry extends BoardCountryBase {
 
     constructor(
         name: string,
-        private readonly _gltfName: string,
+        gltfName: string,
+        public readonly territoryCode: TerritoryCode,
     ) {
         const meshNode = game.engine.managers.asset
             .getGLTFAsset('board')
-            .gltfFile.defaultScene.meshes.find(m => m.name === _gltfName);
-        if (!meshNode) throw new MissingAssetError(`Failed to get mesh with name '${_gltfName}' for country '${name}'`);
+            .gltfFile.defaultScene.meshes.find(m => m.name === gltfName);
+        if (!meshNode) throw new MissingAssetError(`Failed to get mesh with name '${gltfName}' for country '${name}'`);
 
         super({
             name: name,
