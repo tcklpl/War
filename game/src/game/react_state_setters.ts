@@ -37,5 +37,7 @@ class ReactStateUseGameSession {
     setGTurnPlayerIndex!: Dispatcher<number>;
     setGPauseReason!: UndefinedDispatcher<GamePauseReason>;
 
+    setGHoverI18nKey!: UndefinedDispatcher<string>;
+
     updateForLobbyExit!: (reason: LobbyExitReason | undefined) => void;
 }

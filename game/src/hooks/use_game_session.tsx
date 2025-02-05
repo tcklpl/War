@@ -40,6 +40,8 @@ interface IGameSessionContext {
     gTurnPlayerIndex: number;
     gPauseReason?: GamePauseReason;
     gIsPaused: boolean;
+
+    gHoverI18nKey?: string;
 }
 
 const GameSessionContext = createContext<IGameSessionContext>({} as IGameSessionContext);
@@ -68,6 +70,8 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
     const [gTurnPlayerIndex, setGTurnPlayerIndex] = useState(0);
     const [gPauseReason, setGPauseReason] = useState<GamePauseReason | undefined>();
     const gIsPaused = !!gPauseReason;
+
+    const [gHoverI18nKey, setGHoverI18nKey] = useState<string | undefined>();
 
     const updateForLobbyExit = useCallback(
         (reason?: LobbyExitReason) => {
@@ -151,6 +155,8 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
         s.setGTurnPlayerIndex = setGTurnPlayerIndex;
         s.setGPauseReason = setGPauseReason;
 
+        s.setGHoverI18nKey = setGHoverI18nKey;
+
         s.updateForLobbyExit = updateForLobbyExit;
     }, [
         gameInstance,
@@ -190,6 +196,7 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
             gTurnPlayerIndex,
             gPauseReason,
             gIsPaused,
+            gHoverI18nKey,
         };
     }, [
         username,
@@ -210,6 +217,7 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
         gTurnPlayerIndex,
         gPauseReason,
         gIsPaused,
+        gHoverI18nKey,
     ]);
 
     return <GameSessionContext.Provider value={gameSessionMemo}>{children}</GameSessionContext.Provider>;
