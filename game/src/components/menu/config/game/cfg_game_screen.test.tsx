@@ -12,5 +12,16 @@ it('renders', async () => {
         gameConfig: new ConfigGame(),
     });
 
+    const mockGlobalGame = {
+        engine: {
+            managers: {
+                asset: {
+                    getCachedAssetCount: () => 1,
+                },
+            },
+        },
+    };
+    vi.stubGlobal('game', mockGlobalGame);
+
     render(<CfgGameScreen />);
 });

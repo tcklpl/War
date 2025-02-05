@@ -18,8 +18,8 @@ const CfgGameScreen: React.FC = () => {
 
     useEffect(() => {
         const fetchUsage = async () => {
-            const usage = await navigator.storage.estimate();
-            setUsedStorage(usage.usage ?? -1);
+            const usage = await navigator.storage?.estimate();
+            setUsedStorage(usage?.usage ?? -1);
 
             const assetNumber = await game.engine.managers.asset.getCachedAssetCount();
             setUsedStorageAssetCount(assetNumber ?? -1);
