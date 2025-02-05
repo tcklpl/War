@@ -7,10 +7,10 @@ vi.mock(':hooks/use_config');
 const mockUseConfig = vi.mocked(useConfig);
 
 it('renders', async () => {
-    mockUseConfig.mockReturnValue({
-        ...(await vi.importActual(':hooks/use_config')),
-        displayConfig: new ConfigDisplay(),
-    });
+	mockUseConfig.mockReturnValue({
+		...(await vi.importActual(':hooks/use_config')),
+		displayConfig: new ConfigDisplay(),
+	});
 
-    render(<CfgDisplayScreen />);
+	render(<CfgDisplayScreen />);
 });

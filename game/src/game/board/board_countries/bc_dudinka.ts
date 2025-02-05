@@ -1,7 +1,7 @@
 import { BoardCountry } from '../board_country';
 
 export class BCDudinka extends BoardCountry {
-    constructor() {
-        super('Dudinka', 'Dudinka', 'dudinka');
-    }
+	constructor() {
+		super('Dudinka', 'Dudinka', 'dudinka');
+	}
 }

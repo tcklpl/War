@@ -1,7 +1,7 @@
 import { BoardCountry } from '../board_country';
 
 export class BCVladvostok extends BoardCountry {
-    constructor() {
-        super('Vladvostok', 'Vladvostok', 'vladvostok');
-    }
+	constructor() {
+		super('Vladvostok', 'Vladvostok', 'vladvostok');
+	}
 }

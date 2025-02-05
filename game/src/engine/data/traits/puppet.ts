@@ -3,20 +3,20 @@ import type { Animatable } from '../animation/animatable';
 import type { AnimationObjectPuppeteer } from '../animation/animation_object_puppeteer';
 
 export interface IPuppet<T extends Animatable> {
-    get puppeteer(): AnimationObjectPuppeteer<T>;
+	get puppeteer(): AnimationObjectPuppeteer<T>;
 }
 
 export function puppet<T extends Animatable, C extends Constructor<Animatable>>(base: C): Constructor<IPuppet<T>> & C {
-    return class extends base {
-        readonly _puppeteer: AnimationObjectPuppeteer<T>;
+	return class extends base {
+		readonly _puppeteer: AnimationObjectPuppeteer<T>;
 
-        constructor(...args: any[]) {
-            super(...args);
-            this._puppeteer = game.engine.orchestrator.getObjectPuppeteer<T>(this as unknown as T);
-        }
+		constructor(...args: any[]) {
+			super(...args);
+			this._puppeteer = game.engine.orchestrator.getObjectPuppeteer<T>(this as unknown as T);
+		}
 
-        get puppeteer() {
-            return this._puppeteer;
-        }
-    };
+		get puppeteer() {
+			return this._puppeteer;
+		}
+	};
 }

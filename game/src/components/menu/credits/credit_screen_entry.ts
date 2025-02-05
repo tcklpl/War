@@ -1,5 +1,5 @@
 export interface CreditScreenEntry {
-    name: string;
-    alias: string;
-    github: string;
+	name: string;
+	alias: string;
+	github: string;
 }

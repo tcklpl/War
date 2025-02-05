@@ -12,32 +12,32 @@ type Dispatcher<T> = React.Dispatch<React.SetStateAction<T>>;
 type UndefinedDispatcher<T> = React.Dispatch<React.SetStateAction<T | undefined>>;
 
 export class ReactStateSetters {
-    readonly useGame = new ReactStateUseGame();
-    readonly useGameSession = new ReactStateUseGameSession();
+	readonly useGame = new ReactStateUseGame();
+	readonly useGameSession = new ReactStateUseGameSession();
 }
 
 class ReactStateUseGame {
-    setGameInstance!: (game: WarGame | undefined) => void;
+	setGameInstance!: (game: WarGame | undefined) => void;
 }
 
 class ReactStateUseGameSession {
-    setUsername!: Dispatcher<string>;
-    setReconnectionInfo!: UndefinedDispatcher<ReconnectionInfo>;
-    setConnection!: UndefinedDispatcher<ServerConnection>;
+	setUsername!: Dispatcher<string>;
+	setReconnectionInfo!: UndefinedDispatcher<ReconnectionInfo>;
+	setConnection!: UndefinedDispatcher<ServerConnection>;
 
-    // Lobby states
-    setLobbies!: UndefinedDispatcher<LobbyListState>;
-    setCurrentLobby!: UndefinedDispatcher<WarGameLobby>;
-    setCurrentLobbyState!: UndefinedDispatcher<LobbyState>;
-    setChat!: Dispatcher<LobbyChatMessage[]>;
-    setGameStartingIn!: UndefinedDispatcher<number>;
+	// Lobby states
+	setLobbies!: UndefinedDispatcher<LobbyListState>;
+	setCurrentLobby!: UndefinedDispatcher<WarGameLobby>;
+	setCurrentLobbyState!: UndefinedDispatcher<LobbyState>;
+	setChat!: Dispatcher<LobbyChatMessage[]>;
+	setGameStartingIn!: UndefinedDispatcher<number>;
 
-    // Game states
-    setCurrentGameSession!: UndefinedDispatcher<WarGameSession>;
-    setGTurnPlayerIndex!: Dispatcher<number>;
-    setGPauseReason!: UndefinedDispatcher<GamePauseReason>;
+	// Game states
+	setCurrentGameSession!: UndefinedDispatcher<WarGameSession>;
+	setGTurnPlayerIndex!: Dispatcher<number>;
+	setGPauseReason!: UndefinedDispatcher<GamePauseReason>;
 
-    setGHoverI18nKey!: UndefinedDispatcher<string>;
+	setGHoverI18nKey!: UndefinedDispatcher<string>;
 
-    updateForLobbyExit!: (reason: LobbyExitReason | undefined) => void;
+	updateForLobbyExit!: (reason: LobbyExitReason | undefined) => void;
 }

@@ -2,15 +2,15 @@ import { Asset } from './asset';
 import type { HDRImageData } from './loaders/hdr_loader';
 
 export class HDRAsset extends Asset {
-    constructor(
-        name: string,
-        url: string,
-        private readonly _data: HDRImageData,
-    ) {
-        super(name, url);
-    }
+	constructor(
+		name: string,
+		url: string,
+		private readonly _data: HDRImageData,
+	) {
+		super(name, url);
+	}
 
-    get data() {
-        return this._data;
-    }
+	get data() {
+		return this._data;
+	}
 }

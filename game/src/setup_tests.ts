@@ -9,9 +9,9 @@ expect.extend(matchers);
 vi.mock('react-i18next');
 
 beforeEach(() => {
-    (useTranslation as Mock).mockReturnValue({ t: (key: string) => key });
+	(useTranslation as Mock).mockReturnValue({ t: (key: string) => key });
 });
 
 afterEach(() => {
-    cleanup();
+	cleanup();
 });

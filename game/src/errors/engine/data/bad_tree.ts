@@ -1,5 +1,5 @@
 export class BadTreeError extends Error {
-    constructor(msg?: string) {
-        super(`Bad tree: ${msg}`);
-    }
+	constructor(msg?: string) {
+		super(`Bad tree: ${msg}`);
+	}
 }

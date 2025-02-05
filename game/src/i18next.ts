@@ -15,19 +15,19 @@ import server_list_enUS from './locales/en-US/server_list.json';
 export const defaultNS = 'ns1';
 
 export const resources = {
-    en: {
-        countries: countries_enUS,
-        loading: loading_enUS,
-        engine: engine_enUS,
-        config: config_enUS,
-        server_list: server_list_enUS,
-        lobby: lobby_enUS,
-        common: common_enUS,
-        parties: parties_enUS,
-        ingame: ingame_enUS,
-        credits: credits_enUS,
-        disclaimer: disclaimer_enUS,
-    },
+	en: {
+		countries: countries_enUS,
+		loading: loading_enUS,
+		engine: engine_enUS,
+		config: config_enUS,
+		server_list: server_list_enUS,
+		lobby: lobby_enUS,
+		common: common_enUS,
+		parties: parties_enUS,
+		ingame: ingame_enUS,
+		credits: credits_enUS,
+		disclaimer: disclaimer_enUS,
+	},
 };
 
 const defaultLanguage = 'en-US';
@@ -36,12 +36,12 @@ if (!language) language = defaultLanguage;
 localStorage.setItem('language', language);
 
 i18next.use(initReactI18next).init({
-    lng: language,
-    debug: false,
-    fallbackLng: 'en', // use en if detected lng is not available
-    saveMissing: true, // send not translated keys to endpoint
-    resources,
-    defaultNS,
+	lng: language,
+	debug: false,
+	fallbackLng: 'en', // use en if detected lng is not available
+	saveMissing: true, // send not translated keys to endpoint
+	resources,
+	defaultNS,
 });
 
 export default i18next;

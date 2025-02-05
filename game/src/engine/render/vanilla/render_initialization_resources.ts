@@ -1,11 +1,11 @@
 import type { RenderResourcePool } from './render_resource_pool';
 
 export interface RenderInitializationResources {
-    canvasPreferredTextureFormat: GPUTextureFormat;
-    pickingBuffer: GPUBuffer;
+	canvasPreferredTextureFormat: GPUTextureFormat;
+	pickingBuffer: GPUBuffer;
 
-    luminanceHistogramBins: number;
-    luminanceHistogramBuffer: GPUBuffer;
+	luminanceHistogramBins: number;
+	luminanceHistogramBuffer: GPUBuffer;
 
-    renderResourcePool: RenderResourcePool;
+	renderResourcePool: RenderResourcePool;
 }

@@ -6,15 +6,15 @@ import './i18next';
 import './style/globals.scss';
 
 function App() {
-    return (
-        <div className='App'>
-            <Hooks>
-                <HashRouter>
-                    <WarGameComponent />
-                </HashRouter>
-            </Hooks>
-        </div>
-    );
+	return (
+		<div className='App'>
+			<Hooks>
+				<HashRouter>
+					<WarGameComponent />
+				</HashRouter>
+			</Hooks>
+		</div>
+	);
 }
 
 export default App;

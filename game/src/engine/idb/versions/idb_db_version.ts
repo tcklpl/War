@@ -1,4 +1,4 @@
 export interface IDBDBVersion {
-    version: number;
-    migrate(db: IDBDatabase): void;
+	version: number;
+	migrate(db: IDBDatabase): void;
 }

@@ -1,8 +1,8 @@
 import type { ConfigPage } from './cfg_page';
 
 export class ConfigDisplay implements ConfigPage {
-    page = 'display';
-    theme: string = 'dark';
-    showPerformance: boolean = false;
-    showPerformanceCharts: boolean = false;
+	page = 'display';
+	theme = 'dark';
+	showPerformance = false;
+	showPerformanceCharts = false;
 }

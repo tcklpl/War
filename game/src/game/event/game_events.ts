@@ -1,8 +1,8 @@
 import type { GamePauseReason } from ':protocol';
 
 export interface GameEvents {
-    onGamePause: (reason: GamePauseReason) => void;
-    onGameResume: () => void;
+	onGamePause: (reason: GamePauseReason) => void;
+	onGameResume: () => void;
 
-    onTerritorySelectionTurn: () => void;
+	onTerritorySelectionTurn: () => void;
 }

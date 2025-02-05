@@ -21,39 +21,39 @@ import { Light } from './light';
     ▓: vec4f
 */
 export class DirectionalLight extends Light {
-    constructor(
-        props: LightProperties,
-        public rotation: Quaternion,
-        enabled: boolean = true,
-    ) {
-        super(props, enabled);
-    }
+	constructor(
+		props: LightProperties,
+		public rotation: Quaternion,
+		enabled = true,
+	) {
+		super(props, enabled);
+	}
 
-    static get byteSize() {
-        return MathUtils.ensurePadding(304);
-    }
+	static get byteSize() {
+		return MathUtils.ensurePadding(304);
+	}
 
-    private getShadowMappingData(): number[] {
-        return this.shadowMappingViewProj?.values ?? new Array(0x40).fill(0);
-    }
+	private getShadowMappingData(): number[] {
+		return this.shadowMappingViewProj?.values ?? new Array(0x40).fill(0);
+	}
 
-    writeToBuffer(buf: GPUBuffer, index: number, generalBufferOffset: number): void {
-        const offset = index * DirectionalLight.byteSize + generalBufferOffset;
+	writeToBuffer(buf: GPUBuffer, index: number, generalBufferOffset: number): void {
+		const offset = index * DirectionalLight.byteSize + generalBufferOffset;
 
-        const shadowMapUV = [
-            this.shadowAtlasMappedRegion?.uvLowerCorner.x ?? -1,
-            this.shadowAtlasMappedRegion?.uvLowerCorner.y ?? -1,
-            this.shadowAtlasMappedRegion?.uvHigherCorner.x ?? -1,
-            this.shadowAtlasMappedRegion?.uvHigherCorner.y ?? -1,
-        ];
-        const data = Float32Array.of(
-            ...this.properties.color.values,
-            this.properties.radius,
-            ...this.rotation.asDirectionVector.multiplyFactor(-1).normalize().values,
-            this.properties.intensity,
-            ...shadowMapUV,
-            ...this.getShadowMappingData(),
-        );
-        device.queue.writeBuffer(buf, offset, data);
-    }
+		const shadowMapUV = [
+			this.shadowAtlasMappedRegion?.uvLowerCorner.x ?? -1,
+			this.shadowAtlasMappedRegion?.uvLowerCorner.y ?? -1,
+			this.shadowAtlasMappedRegion?.uvHigherCorner.x ?? -1,
+			this.shadowAtlasMappedRegion?.uvHigherCorner.y ?? -1,
+		];
+		const data = Float32Array.of(
+			...this.properties.color.values,
+			this.properties.radius,
+			...this.rotation.asDirectionVector.multiplyFactor(-1).normalize().values,
+			this.properties.intensity,
+			...shadowMapUV,
+			...this.getShadowMappingData(),
+		);
+		device.queue.writeBuffer(buf, offset, data);
+	}
 }

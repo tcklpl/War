@@ -1,5 +1,5 @@
 export interface ReconnectionInfo {
-    serverIp: string;
-    serverAuthToken: string;
-    sessionToken: string;
+	serverIp: string;
+	serverAuthToken: string;
+	sessionToken: string;
 }

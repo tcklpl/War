@@ -4,18 +4,18 @@ import type { LightProperties } from './light';
 import { Light } from './light';
 
 export class PointLight extends Light {
-    constructor(props: LightProperties, enabled: boolean = true) {
-        super(props, enabled);
-    }
+	constructor(props: LightProperties, enabled = true) {
+		super(props, enabled);
+	}
 
-    static get byteSize() {
-        return MathUtils.ensurePadding(Vec3.byteSize + 4 + Vec3.byteSize);
-    }
+	static get byteSize() {
+		return MathUtils.ensurePadding(Vec3.byteSize + 4 + Vec3.byteSize);
+	}
 
-    writeToBuffer(buf: GPUBuffer, index: number, generalBufferOffset: number): void {
-        const offset = index * PointLight.byteSize + generalBufferOffset;
+	writeToBuffer(buf: GPUBuffer, index: number, generalBufferOffset: number): void {
+		const offset = index * PointLight.byteSize + generalBufferOffset;
 
-        /*
+		/*
             Directional light buffer format:
 
             0   4   8   B   F
@@ -26,11 +26,11 @@ export class PointLight extends Light {
             ░: vec3f
             ▒: f32
         */
-        const bufferContent = new Float32Array([
-            ...this.properties.color.asF32Array,
-            this.properties.intensity,
-            ...this.properties.position.asF32Array,
-        ]);
-        device.queue.writeBuffer(buf, offset, bufferContent);
-    }
+		const bufferContent = new Float32Array([
+			...this.properties.color.asF32Array,
+			this.properties.intensity,
+			...this.properties.position.asF32Array,
+		]);
+		device.queue.writeBuffer(buf, offset, bufferContent);
+	}
 }

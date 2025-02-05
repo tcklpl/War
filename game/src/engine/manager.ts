@@ -1,15 +1,15 @@
 export abstract class Manager<T> {
-    private readonly _registered: T[] = [];
+	private readonly _registered: T[] = [];
 
-    register(item: T) {
-        this._registered.push(item);
-    }
+	register(item: T) {
+		this._registered.push(item);
+	}
 
-    registerAll(items: T[]) {
-        this._registered.push(...items);
-    }
+	registerAll(items: T[]) {
+		this._registered.push(...items);
+	}
 
-    get all() {
-        return this._registered;
-    }
+	get all() {
+		return this._registered;
+	}
 }

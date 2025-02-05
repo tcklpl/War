@@ -1,25 +1,25 @@
 import { PrincipledBSDFShader } from '../../../shaders/geometry/principled_bsdf/principled_bsdf_shader';
 
 export abstract class Material {
-    private readonly _id: number;
+	private readonly _id: number;
 
-    constructor(private readonly _name: string) {
-        this._id = game.engine.managers.material.requestMaterialId();
-    }
+	constructor(private readonly _name: string) {
+		this._id = game.engine.managers.material.requestMaterialId();
+	}
 
-    get id() {
-        return this._id;
-    }
+	get id() {
+		return this._id;
+	}
 
-    get name() {
-        return this._name;
-    }
+	get name() {
+		return this._name;
+	}
 
-    abstract getBindGroup(pipeline: GPURenderPipeline): GPUBindGroup;
+	abstract getBindGroup(pipeline: GPURenderPipeline): GPUBindGroup;
 
-    bind(passEncoder: GPURenderPassEncoder, currentPipeline: GPURenderPipeline) {
-        passEncoder.setBindGroup(PrincipledBSDFShader.BINDING_GROUPS.MATERIAL, this.getBindGroup(currentPipeline));
-    }
+	bind(passEncoder: GPURenderPassEncoder, currentPipeline: GPURenderPipeline) {
+		passEncoder.setBindGroup(PrincipledBSDFShader.BINDING_GROUPS.MATERIAL, this.getBindGroup(currentPipeline));
+	}
 
-    abstract free(): void;
+	abstract free(): void;
 }

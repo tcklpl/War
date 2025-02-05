@@ -44,65 +44,65 @@ import { BCVietnam } from './board_countries/bc_vietnam';
 import { BCVladvostok } from './board_countries/bc_vladvostok';
 
 export class BoardCountriesIndex extends EmptyEntity {
-    private readonly BoardCountries = {
-        alaska: new BCAlaska(),
-        algeria: new BCAlgeria(),
-        aral: new BCAral(),
-        argentina: new BCArgentina(),
-        australia: new BCAustralia(),
-        borneo: new BCBorneo(),
-        brazil: new BCBrazil(),
-        california: new BCCalifornia(),
-        chile: new BCChile(),
-        china: new BCChina(),
-        congo: new BCCongo(),
-        cuba: new BCCuba(),
-        dudinka: new BCDudinka(),
-        egypt: new BCEgypt(),
-        england: new BCEngland(),
-        france: new BCFrance(),
-        germany: new BCGermany(),
-        greenland: new BCGreenland(),
-        iceland: new BCIceland(),
-        india: new BCIndia(),
-        japan: new BCJapan(),
-        labrador: new BCLabrador(),
-        mackenzie: new BCMackenzie(),
-        madagascar: new BCMadagascar(),
-        mexico: new BCMexico(),
-        middle_east: new BCMiddleEast(),
-        mongolia: new BCMongolia(),
-        moscow: new BCMoscow(),
-        new_guinea: new BCNewGuinea(),
-        new_york: new BCNewYork(),
-        ornsk: new BCOrnsk(),
-        ottawa: new BCOttawa(),
-        poland: new BCPoland(),
-        siberia: new BCSiberia(),
-        south_africa: new BCSouthAfrica(),
-        sudan: new BCSudan(),
-        sumatra: new BCSumatra(),
-        sweden: new BCSweden(),
-        tchita: new BCTchita(),
-        vancouver: new BCVancouver(),
-        venezuela: new BCVenezuela(),
-        vietnam: new BCVietnam(),
-        vladvostok: new BCVladvostok(),
-    } as const;
+	private readonly BoardCountries = {
+		alaska: new BCAlaska(),
+		algeria: new BCAlgeria(),
+		aral: new BCAral(),
+		argentina: new BCArgentina(),
+		australia: new BCAustralia(),
+		borneo: new BCBorneo(),
+		brazil: new BCBrazil(),
+		california: new BCCalifornia(),
+		chile: new BCChile(),
+		china: new BCChina(),
+		congo: new BCCongo(),
+		cuba: new BCCuba(),
+		dudinka: new BCDudinka(),
+		egypt: new BCEgypt(),
+		england: new BCEngland(),
+		france: new BCFrance(),
+		germany: new BCGermany(),
+		greenland: new BCGreenland(),
+		iceland: new BCIceland(),
+		india: new BCIndia(),
+		japan: new BCJapan(),
+		labrador: new BCLabrador(),
+		mackenzie: new BCMackenzie(),
+		madagascar: new BCMadagascar(),
+		mexico: new BCMexico(),
+		middle_east: new BCMiddleEast(),
+		mongolia: new BCMongolia(),
+		moscow: new BCMoscow(),
+		new_guinea: new BCNewGuinea(),
+		new_york: new BCNewYork(),
+		ornsk: new BCOrnsk(),
+		ottawa: new BCOttawa(),
+		poland: new BCPoland(),
+		siberia: new BCSiberia(),
+		south_africa: new BCSouthAfrica(),
+		sudan: new BCSudan(),
+		sumatra: new BCSumatra(),
+		sweden: new BCSweden(),
+		tchita: new BCTchita(),
+		vancouver: new BCVancouver(),
+		venezuela: new BCVenezuela(),
+		vietnam: new BCVietnam(),
+		vladvostok: new BCVladvostok(),
+	} as const;
 
-    constructor() {
-        super({
-            name: 'Country container',
-        });
+	constructor() {
+		super({
+			name: 'Country container',
+		});
 
-        this.allCountries.forEach(c => (c.parent = this));
-    }
+		this.allCountries.forEach(c => (c.parent = this));
+	}
 
-    getCountry<T extends keyof typeof this.BoardCountries>(country: T): (typeof this.BoardCountries)[T] {
-        return this.BoardCountries[country];
-    }
+	getCountry<T extends keyof typeof this.BoardCountries>(country: T): (typeof this.BoardCountries)[T] {
+		return this.BoardCountries[country];
+	}
 
-    get allCountries() {
-        return Object.values(this.BoardCountries);
-    }
+	get allCountries() {
+		return Object.values(this.BoardCountries);
+	}
 }

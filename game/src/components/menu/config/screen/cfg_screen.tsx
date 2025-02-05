@@ -16,77 +16,77 @@ import CfgGraphicsScreen from '../graphics/cfg_graphics_screen';
 import style from './cfg_screen.module.scss';
 
 interface IPropsCfgScreen {
-    showReturnToMenu?: boolean;
+	showReturnToMenu?: boolean;
 }
 
 const CfgScreen: React.FC<IPropsCfgScreen> = ({ showReturnToMenu }) => {
-    const { palette } = useTheme();
-    const navigate = useNavigate();
-    const [alignment, setAlignment] = React.useState('');
-    const [currentConfigScreen, setCurrentConfigScreen] = useState<ReactNode>(<CfgScreenDefaultBackground />);
-    const { t } = useTranslation(['config', 'common']);
-    const { gameInstance } = useGame();
-    const { saveConfig } = useConfig();
+	const { palette } = useTheme();
+	const navigate = useNavigate();
+	const [alignment, setAlignment] = React.useState('');
+	const [currentConfigScreen, setCurrentConfigScreen] = useState<ReactNode>(<CfgScreenDefaultBackground />);
+	const { t } = useTranslation(['config', 'common']);
+	const { gameInstance } = useGame();
+	const { saveConfig } = useConfig();
 
-    useEffect(() => {
-        // save config when the tab is closed
-        return () => {
-            saveConfig();
-        };
-    }, [saveConfig, setCurrentConfigScreen]);
+	useEffect(() => {
+		// save config when the tab is closed
+		return () => {
+			saveConfig();
+		};
+	}, [saveConfig, setCurrentConfigScreen]);
 
-    return (
-        <Box
-            style={{ backgroundColor: palette.background.default }}
-            className={style.screen}
-            sx={{ flexDirection: 'column', display: 'flex' }}
-        >
-            <Box className={style.header}>
-                <Fade in timeout={100}>
-                    <Stack spacing={2} alignItems={'center'}>
-                        <Slide in direction='down' timeout={200}>
-                            <ToggleButtonGroup
-                                color='primary'
-                                exclusive
-                                onChange={(e, alignment) => setAlignment(alignment)}
-                                value={alignment}
-                            >
-                                {showReturnToMenu && (
-                                    <ToggleButton value={'menu'} onClick={() => navigate('/')}>
-                                        <ArrowBackIcon style={{ marginRight: '0.5em' }} /> {t('common:back_to_menu')}
-                                    </ToggleButton>
-                                )}
+	return (
+		<Box
+			style={{ backgroundColor: palette.background.default }}
+			className={style.screen}
+			sx={{ flexDirection: 'column', display: 'flex' }}
+		>
+			<Box className={style.header}>
+				<Fade in timeout={100}>
+					<Stack spacing={2} alignItems={'center'}>
+						<Slide in direction='down' timeout={200}>
+							<ToggleButtonGroup
+								color='primary'
+								exclusive
+								onChange={(e, alignment) => setAlignment(alignment)}
+								value={alignment}
+							>
+								{showReturnToMenu && (
+									<ToggleButton value={'menu'} onClick={() => navigate('/')}>
+										<ArrowBackIcon style={{ marginRight: '0.5em' }} /> {t('common:back_to_menu')}
+									</ToggleButton>
+								)}
 
-                                <ToggleButton
-                                    value={'display'}
-                                    onClick={() => setCurrentConfigScreen(<CfgDisplayScreen />)}
-                                >
-                                    <MonitorIcon style={{ marginRight: '0.5em' }} /> {t('config:display')}
-                                </ToggleButton>
+								<ToggleButton
+									value={'display'}
+									onClick={() => setCurrentConfigScreen(<CfgDisplayScreen />)}
+								>
+									<MonitorIcon style={{ marginRight: '0.5em' }} /> {t('config:display')}
+								</ToggleButton>
 
-                                <ToggleButton
-                                    value={'graphics'}
-                                    onClick={() => setCurrentConfigScreen(<CfgGraphicsScreen />)}
-                                >
-                                    <ViewInArIcon style={{ marginRight: '0.5em' }} /> {t('config:graphics')}
-                                </ToggleButton>
+								<ToggleButton
+									value={'graphics'}
+									onClick={() => setCurrentConfigScreen(<CfgGraphicsScreen />)}
+								>
+									<ViewInArIcon style={{ marginRight: '0.5em' }} /> {t('config:graphics')}
+								</ToggleButton>
 
-                                <ToggleButton value={'game'} onClick={() => setCurrentConfigScreen(<CfgGameScreen />)}>
-                                    <SportsEsportsIcon style={{ marginRight: '0.5em' }} /> {t('config:game')}
-                                </ToggleButton>
-                            </ToggleButtonGroup>
-                        </Slide>
+								<ToggleButton value={'game'} onClick={() => setCurrentConfigScreen(<CfgGameScreen />)}>
+									<SportsEsportsIcon style={{ marginRight: '0.5em' }} /> {t('config:game')}
+								</ToggleButton>
+							</ToggleButtonGroup>
+						</Slide>
 
-                        {!gameInstance?.engine.db.isAvailable ? (
-                            <Alert severity='warning'>{t('config:no_idb')}</Alert>
-                        ) : undefined}
-                    </Stack>
-                </Fade>
-            </Box>
+						{!gameInstance?.engine.db.isAvailable ? (
+							<Alert severity='warning'>{t('config:no_idb')}</Alert>
+						) : undefined}
+					</Stack>
+				</Fade>
+			</Box>
 
-            <Box flexGrow={1}>{currentConfigScreen}</Box>
-        </Box>
-    );
+			<Box flexGrow={1}>{currentConfigScreen}</Box>
+		</Box>
+	);
 };
 
 export default CfgScreen;

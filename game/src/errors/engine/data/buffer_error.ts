@@ -1,5 +1,5 @@
 export class BufferError extends Error {
-    constructor(msg?: string) {
-        super(`Buffer error: ${msg}`);
-    }
+	constructor(msg?: string) {
+		super(`Buffer error: ${msg}`);
+	}
 }

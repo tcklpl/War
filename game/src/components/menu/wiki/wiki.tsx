@@ -1,12 +1,12 @@
 import type { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-interface WikiPageProps {}
+type WikiPageProps = {};
 
 const WikiPage: FunctionComponent<WikiPageProps> = () => {
-    const { t } = useTranslation([]);
+	const { t } = useTranslation([]);
 
-    return <></>;
+	return <></>;
 };
 
 export default WikiPage;

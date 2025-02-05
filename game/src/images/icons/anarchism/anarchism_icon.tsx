@@ -5,7 +5,7 @@ import CustomIcon from '../custom_icon';
 import AnarchismIconSrc from './anarchism.svg?react';
 
 const AnarchismIcon: FunctionComponent<SvgIconProps> = ({ ...props }) => {
-    return <CustomIcon svg={AnarchismIconSrc} {...props} />;
+	return <CustomIcon svg={AnarchismIconSrc} {...props} />;
 };
 
 export default AnarchismIcon;

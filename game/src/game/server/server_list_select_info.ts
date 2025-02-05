@@ -1,6 +1,6 @@
 export interface ServerListSelectInfo {
-    id: string;
-    localName: string;
-    address: string;
-    listPosition: number;
+	id: string;
+	localName: string;
+	address: string;
+	listPosition: number;
 }

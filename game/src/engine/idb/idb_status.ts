@@ -1,6 +1,6 @@
 export enum IDBStatus {
-    STARTING,
-    NOT_SUPPORTED,
-    OPEN,
-    ERROR,
+	STARTING = 0,
+	NOT_SUPPORTED = 1,
+	OPEN = 2,
+	ERROR = 3,
 }

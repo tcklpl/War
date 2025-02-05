@@ -1,8 +1,8 @@
 {
-    "main_message": "Loading, please wait...",
-    "starting": "Starting",
-    "init_engine": "Initializing engine",
-    "load_assets": "Loading assets",
-    "init_game": "Initializing game",
-    "finished": "Load complete"
+	"main_message": "Loading, please wait...",
+	"starting": "Starting",
+	"init_engine": "Initializing engine",
+	"load_assets": "Loading assets",
+	"init_game": "Initializing game",
+	"finished": "Load complete"
 }

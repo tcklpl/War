@@ -1,3 +1,3 @@
 export interface ConfigPage {
-    page: string;
+	page: string;
 }

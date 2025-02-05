@@ -2,6 +2,6 @@ import type { ServerConnectionCandidate } from ':game/server/connection/server_c
 import type { ServerListSelectInfo } from ':game/server/server_list_select_info';
 
 export interface ServerListEntry {
-    info: ServerListSelectInfo;
-    connectionCandidate: ServerConnectionCandidate;
+	info: ServerListSelectInfo;
+	connectionCandidate: ServerConnectionCandidate;
 }

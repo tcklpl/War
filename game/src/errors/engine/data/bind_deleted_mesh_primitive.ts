@@ -1,5 +1,5 @@
 export class BindDeletedMeshPrimitiveError extends Error {
-    constructor(msg?: string) {
-        super(`Binding deleted mesh primitive: ${msg}`);
-    }
+	constructor(msg?: string) {
+		super(`Binding deleted mesh primitive: ${msg}`);
+	}
 }
