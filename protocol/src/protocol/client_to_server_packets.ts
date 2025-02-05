@@ -37,7 +37,11 @@ export interface ClientToServerPackets {
     */
     gPing: (pong: () => void) => void;
     gReconnectToGame: (token: string, result: (status: ReconnectionStatus) => void) => void;
+
+    // Territory selection
     gSelectStartingTerritory: (code: TerritoryCode) => void;
+
+    // Ingame
     gGameAction: (action: TurnAction) => void;
 
     // Admin Packets

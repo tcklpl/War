@@ -1,6 +1,5 @@
 import { EventListener } from ':game/event/decorator/event_listener';
-import type { InitialGameStatePacket } from ':protocol';
-import { type GamePauseReason } from ':protocol';
+import type { GamePauseReason, InitialGameStatePacket } from ':protocol';
 import { ClientPacketGMoveOn } from '../server/connection/packet/to_send/ingame/move_on';
 import { ClientPacketGPause } from '../server/connection/packet/to_send/ingame/pause';
 import { ClientPacketPing } from '../server/connection/packet/to_send/ingame/ping';
@@ -8,6 +7,7 @@ import { ClientPacketGResume } from '../server/connection/packet/to_send/ingame/
 import { ClientPacketGSave } from '../server/connection/packet/to_send/ingame/save';
 import { ClientPacketGSaveAndQuit } from '../server/connection/packet/to_send/ingame/save_and_quit';
 import type { ReconnectionInfo } from '../server/connection/reconnection_info';
+import { InitialTerritorySelectionManager } from './ingame/initial_territory_selection_manager';
 
 export class WarGameSession {
     private _ping = 0;
@@ -16,6 +16,7 @@ export class WarGameSession {
     private _token: string = '';
 
     private _pauseReason?: GamePauseReason;
+    private _initialTerritorySelectionManager = new InitialTerritorySelectionManager();
     private _currentTurnPlayerIndex = 0;
 
     constructor(public readonly initialGameState: InitialGameStatePacket) {
