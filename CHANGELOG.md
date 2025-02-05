@@ -31,6 +31,7 @@ Icons:
 ### 🔧 Changed
 
 - 🎮🔩 Updated game to use `verbatimModuleSyntax`.
+- 🎮🖥🔩⬆️ Updated all dependencies to their latest version.
 
 ## [0.5.0] - 2024-12-01
 
