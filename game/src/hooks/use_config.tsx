@@ -47,7 +47,7 @@ const ConfigProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) 
 		});
 	}, [gameInstance]);
 
-	const compareObjects = (a: any, b: any) => {
+	const compareObjects = useCallback((a: any, b: any) => {
 		const keysA = Object.keys(a);
 		const keysB = Object.keys(a);
 		if (keysA.length !== keysB.length) return false;
@@ -57,7 +57,7 @@ const ConfigProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) 
 		}
 
 		return true;
-	};
+	}, []);
 
 	const shouldRenitializeRenderer = useCallback(() => {
 		if (!gameInstance?.engine.config) return false;
@@ -68,7 +68,7 @@ const ConfigProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) 
 		hasChanged = hasChanged || !compareObjects(gameInstance.engine.config.game, gameConfig);
 
 		return hasChanged;
-	}, [graphicsConfig, gameConfig, gameInstance]);
+	}, [graphicsConfig, gameConfig, gameInstance, compareObjects]);
 
 	const saveConfig = useCallback(async () => {
 		if (!gameInstance?.engine.config) return;
@@ -89,6 +89,7 @@ const ConfigProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) 
 		}
 	}, [displayConfig, graphicsConfig, gameConfig, gameInstance, sessionConfig, shouldRenitializeRenderer]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: needed
 	const valueMemo = useMemo<IConfigContext>(() => {
 		return {
 			displayConfig,

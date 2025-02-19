@@ -6,10 +6,10 @@ export class URLUtils {
 			url = new URL(address);
 
 			if (!url.hostname) {
-				url = new URL('http://' + address);
+				url = new URL(`http://${address}`);
 			}
 		} catch {
-			url = new URL('http://' + address);
+			url = new URL(`http://${address}`);
 		}
 
 		if (!url.port) {

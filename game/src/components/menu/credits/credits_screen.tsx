@@ -7,9 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import type { CreditScreenEntry } from './credit_screen_entry';
 
-type CreditsScreenProps = {};
-
-const CreditsScreen: FunctionComponent<CreditsScreenProps> = () => {
+const CreditsScreen: FunctionComponent = () => {
 	const { t } = useTranslation(['common', 'credits']);
 	const { palette } = useTheme();
 

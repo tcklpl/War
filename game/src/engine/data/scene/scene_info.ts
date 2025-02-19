@@ -60,7 +60,7 @@ export class SceneInfo {
             4       IBL LUT
         */
 		return device.createBindGroup({
-			label: `Scene info bind group`,
+			label: 'Scene info bind group',
 			layout: pipeline.getBindGroupLayout(opt.layoutIndex),
 			entries: [
 				...(opt.directionalLights.use

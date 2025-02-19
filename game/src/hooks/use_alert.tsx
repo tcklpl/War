@@ -19,12 +19,9 @@ const AlertContext = createContext<IAlertContext>({} as IAlertContext);
 const AlertProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 	const [alertQueue, setAlertQueue] = useState<IAlertInfo[]>([]);
 
-	const enqueueAlert = useCallback(
-		(alert: IAlertInfo) => {
-			setAlertQueue(queue => [...queue, alert]);
-		},
-		[setAlertQueue],
-	);
+	const enqueueAlert = useCallback((alert: IAlertInfo) => {
+		setAlertQueue(queue => [...queue, alert]);
+	}, []);
 
 	const getAlert = useCallback(() => {
 		if (alertQueue.length === 0) return undefined;

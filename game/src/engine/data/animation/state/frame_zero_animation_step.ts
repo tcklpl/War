@@ -10,6 +10,6 @@ export class FrameZeroAnimationStep<T extends Animatable> extends AnimationStep<
 	}
 
 	offsetSeconds(_offset: number): this {
-		throw new IllegalOperationError(`Trying to set animation offset on a frame zero step`);
+		throw new IllegalOperationError('Trying to set animation offset on a frame zero step');
 	}
 }

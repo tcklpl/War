@@ -139,6 +139,8 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
 	 * Pass react state setters to the non-component classes (plain ts files).
 	 * I decided to do this as it's simpler than importing a whole ass state management library.
 	 */
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: needed
 	useEffect(() => {
 		if (!gameInstance) return;
 		const s = gameInstance.state.reactState.useGameSession;
@@ -201,11 +203,8 @@ const GameSessionProvider: React.FC<{ children?: React.ReactNode }> = ({ childre
 		};
 	}, [
 		username,
-		setUsername,
 		reconnectionInfo,
-		setReconnectionInfo,
 		connection,
-		setConnection,
 		saveGameSession,
 		lobbies,
 		currentLobby,

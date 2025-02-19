@@ -38,7 +38,7 @@ export class RenderStageEnvironment implements RenderStage {
 
 	private createPipeline(hdrFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs ssao pipeline`,
+			label: 'rs ssao pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._shader.module,

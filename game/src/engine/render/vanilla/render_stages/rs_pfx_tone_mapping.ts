@@ -32,7 +32,7 @@ export class RenderStagePFXToneMapping implements RenderStage {
 
 	private createPipeline(format: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs pfx and tonemapping pipeline`,
+			label: 'rs pfx and tonemapping pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._shader.module,

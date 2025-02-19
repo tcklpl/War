@@ -27,6 +27,7 @@ const LobbySelectCreateLobby: React.FC<{
 	const { gameInstance } = useGame();
 	const { lobbies } = useGameSession();
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(open): need to update
 	useEffect(() => {
 		setName('');
 		setJoinable(true);
@@ -67,7 +68,7 @@ const LobbySelectCreateLobby: React.FC<{
 					<FormControlLabel
 						control={<Switch checked={joinable} onChange={() => setJoinable(!joinable)} />}
 						label={t('lobby:joinable')}
-					></FormControlLabel>
+					/>
 				</Stack>
 			</DialogContent>
 			<DialogActions>

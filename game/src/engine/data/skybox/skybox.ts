@@ -23,7 +23,7 @@ export abstract class Skybox {
 		if (result) return result;
 
 		const skyboxBindGroup = device.createBindGroup({
-			label: `Skybox bind group`,
+			label: 'Skybox bind group',
 			layout: pipeline.getBindGroupLayout(SkyboxShader.BINDING_GROUPS.TEXTURE),
 			entries: [
 				{ binding: 0, resource: this._sampler },

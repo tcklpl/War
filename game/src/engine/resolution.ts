@@ -16,9 +16,9 @@ export class Resolution {
 	}
 
 	private getResolutionFromPercentage(percentage: number) {
-		percentage /= 100;
+		const normalizedPercentage = percentage / 100;
 		const fullPixelCount = this._full.x * this._full.y;
-		const newPixelCount = fullPixelCount * percentage;
+		const newPixelCount = fullPixelCount * normalizedPercentage;
 		const wRatio = this.full.y / this.full.x;
 		const hRatio = this.full.x / this.full.y;
 		const width = Math.round(Math.sqrt(newPixelCount / wRatio));

@@ -118,7 +118,7 @@ export class Quaternion {
 	}
 
 	static fromEulerAnglesDegrees(roll: number, pitch: number, yaw: number) {
-		return this.fromEulerAnglesRadians(
+		return Quaternion.fromEulerAnglesRadians(
 			MathUtils.degToRad(roll),
 			MathUtils.degToRad(pitch),
 			MathUtils.degToRad(yaw),
@@ -154,7 +154,7 @@ export class Quaternion {
 		const dot = Vec3.dot(front, toVector);
 		const ang = Math.acos(dot);
 
-		return this.fromAngleAxis(rotAxis, ang);
+		return Quaternion.fromAngleAxis(rotAxis, ang);
 	}
 
 	static dot(a: Quaternion, b: Quaternion) {
@@ -177,7 +177,7 @@ export class Quaternion {
 		// something broken will happen.
 
 		// Compute the cosine of the angle between the two vectors.
-		let dot = this.dot(a, b);
+		let dot = Quaternion.dot(a, b);
 		const DOT_THRESHOLD = 0.9995;
 
 		if (dot > DOT_THRESHOLD) {

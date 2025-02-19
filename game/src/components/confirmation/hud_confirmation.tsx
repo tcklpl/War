@@ -20,20 +20,20 @@ const HUDConfirmation: React.FC = () => {
 		setOpen(!!currentConfirmation);
 	}, [currentConfirmation]);
 
-	const handleClose = () => {
+	const handleClose = useCallback(() => {
 		setOpen(false);
 		setCurrentConfirmation(undefined);
-	};
+	}, []);
 
 	const confirm = useCallback(() => {
 		currentConfirmation?.onConfirm();
 		handleClose();
-	}, [currentConfirmation]);
+	}, [currentConfirmation, handleClose]);
 
 	const cancel = useCallback(() => {
 		currentConfirmation?.onCancel?.();
 		handleClose();
-	}, [currentConfirmation]);
+	}, [currentConfirmation, handleClose]);
 
 	return (
 		<Dialog open={open} onClose={cancel}>

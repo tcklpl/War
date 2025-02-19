@@ -33,6 +33,7 @@ const ServerSelectAddServerScreen: React.FC<{
 	const [nameError, setNameError] = useState('');
 	const [addressError, setAddressError] = useState('');
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: need to update when open updates
 	useEffect(() => {
 		setName('');
 		setAddress('');

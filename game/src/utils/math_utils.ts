@@ -24,10 +24,11 @@ export class MathUtils {
 	static haltonSequence(base: number, index: number) {
 		let result = 0;
 		let f = 1;
-		while (index > 0) {
+		let curIndex = index;
+		while (curIndex > 0) {
 			f /= base;
-			result += f * (index % base);
-			index = Math.floor(index / base);
+			result += f * (curIndex % base);
+			curIndex = Math.floor(curIndex / base);
 		}
 		return result;
 	}

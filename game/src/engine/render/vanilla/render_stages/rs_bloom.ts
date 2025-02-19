@@ -44,7 +44,7 @@ export class RenderStageBloom implements RenderStage {
 
 	private createBloomPipeline(shader: Shader, hdrTextureFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs bloom pipeline`,
+			label: 'rs bloom pipeline',
 			layout: 'auto',
 			vertex: {
 				module: shader.module,

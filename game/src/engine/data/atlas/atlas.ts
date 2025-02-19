@@ -1,7 +1,7 @@
 import { MathUtils } from '../../../utils/math_utils';
 import { Texture } from '../texture/texture';
 import { Vec2 } from '../vec/vec2';
-import { AtlasTree } from './atlas_tree';
+import { AtlasTree, type AtlasTreeNode } from './atlas_tree';
 import { MappedAtlasRegion } from './mapped_atlas_region';
 import type { MappedRegionRequest } from './mapped_region_request';
 import { MappedRegionSize } from './mapped_region_size';
@@ -39,7 +39,7 @@ export class Atlas {
 
 	requestMappedRegion(req: MappedRegionRequest) {
 		let desiredAtlasDepth = this.mappedSizeToAtlasDepth(req.preferredSize);
-		let availableNode;
+		let availableNode: AtlasTreeNode | null;
 		do {
 			// try to find an available node at the desired depth
 			availableNode = this._tree.tryToFindAvailableNode(desiredAtlasDepth);

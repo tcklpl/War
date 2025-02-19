@@ -40,7 +40,7 @@ export class RenderStageLights implements RenderStage {
 
 	private createPipeline() {
 		return device.createRenderPipelineAsync({
-			label: `rs ssao pipeline`,
+			label: 'rs ssao pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._depthShader.module,

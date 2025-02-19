@@ -161,7 +161,7 @@ export class RenderStageSSAO implements RenderStage {
 
 	private createSSAOPipeline(shader: Shader) {
 		return device.createRenderPipelineAsync({
-			label: `rs ssao pipeline`,
+			label: 'rs ssao pipeline',
 			layout: 'auto',
 			vertex: {
 				module: shader.module,

@@ -8,9 +8,7 @@ import { Box, Tab, Tabs, Typography } from '@mui/material';
 import type { FunctionComponent, ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type HUDCommonPlayOrderProps = {};
-
-const HUDCommonPlayOrder: FunctionComponent<HUDCommonPlayOrderProps> = () => {
+const HUDCommonPlayOrder: FunctionComponent = () => {
 	const { currentGameSession, gTurnPlayerIndex } = useGameSession();
 	const { t } = useTranslation(['parties', 'ingame']);
 

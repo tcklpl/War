@@ -24,11 +24,12 @@ const LobbyChatBox = () => {
 		setIsAtChatEnd(e.currentTarget.scrollHeight - e.currentTarget.scrollTop === e.currentTarget.clientHeight);
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: chat is needed to trigger effect
 	useEffect(() => {
 		if (isAtChatEnd) {
 			chatboxRef.current.scrollTo({ top: chatboxRef.current.scrollHeight });
 		}
-	}, [chat, isAtChatEnd]);
+	}, [chat, isAtChatEnd, chatboxRef]);
 
 	return (
 		<>

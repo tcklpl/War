@@ -14,7 +14,7 @@ export abstract class ClientPacket<E extends ClientPacketEventNames> {
 	}
 
 	dispatch() {
-		if (!game.state.server) console.warn(`Trying to dispatch packet with an undefined server state`);
+		if (!game.state.server) console.warn('Trying to dispatch packet with an undefined server state');
 		game.state.server?.connection.emitPacket(this);
 	}
 

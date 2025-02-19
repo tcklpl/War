@@ -15,14 +15,14 @@ const GameProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) =>
 	useEffect(() => {
 		if (!gameInstance) return;
 		gameInstance.state.reactState.useGame.setGameInstance = setGameInstance;
-	}, [gameInstance, setGameInstance]);
+	}, [gameInstance]);
 
 	const gameMemo = useMemo<IGameContext>(() => {
 		return {
 			gameInstance,
 			setGameInstance,
 		};
-	}, [gameInstance, setGameInstance]);
+	}, [gameInstance]);
 
 	return <GameContext.Provider value={gameMemo}>{children}</GameContext.Provider>;
 };

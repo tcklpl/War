@@ -27,7 +27,7 @@ export class RenderStageTAA implements RenderStage {
 
 	private createTAAPipeline(hdrTextureFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs bloom pipeline`,
+			label: 'rs bloom pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._taaShader.module,

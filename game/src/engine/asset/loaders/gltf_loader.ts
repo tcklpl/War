@@ -366,7 +366,7 @@ export class GLTFLoader {
 	}
 
 	async loadGLBAsset(blob: ArrayBuffer) {
-		if (blob.byteLength < 12) throw new BadGLTFFileError(`GLB File with less then 12 bytes of length`);
+		if (blob.byteLength < 12) throw new BadGLTFFileError('GLB File with less then 12 bytes of length');
 
 		const header = new Uint32Array(blob.slice(0, 12));
 		const magicNumber = header[0];
@@ -375,7 +375,7 @@ export class GLTFLoader {
 
 		// header validation
 		if (magicNumber !== 0x46546c67) throw new BadGLTFFileError(`GLB File header magic number doesn't match`);
-		if (version !== 2) throw new BadGLTFFileError(`GLB File header version is not 2`);
+		if (version !== 2) throw new BadGLTFFileError('GLB File header version is not 2');
 		if (length !== blob.byteLength)
 			throw new BadGLTFFileError(
 				`GLB File header length of '${length}' doesn't match blob length of '${blob.byteLength}'`,

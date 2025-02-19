@@ -12,7 +12,7 @@ export class Time {
 	 */
 	private static _deltaTime = 0;
 	static get DeltaTime() {
-		return this._deltaTime;
+		return Time._deltaTime;
 	}
 
 	/**
@@ -22,14 +22,14 @@ export class Time {
 	 */
 	private static _fps = 0;
 	static get FPS() {
-		return this._fps;
+		return Time._fps;
 	}
 
 	static updateDeltaTime(deltaTime: number) {
-		this._deltaTime = deltaTime;
+		Time._deltaTime = deltaTime;
 	}
 
 	static updateFPS(fps: number) {
-		this._fps = fps;
+		Time._fps = fps;
 	}
 }

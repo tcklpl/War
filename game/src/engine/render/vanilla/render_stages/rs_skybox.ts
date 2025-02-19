@@ -21,7 +21,7 @@ export class RenderStageSkybox implements RenderStage {
 
 	private createPipeline(hdrTextureFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs skybox pipeline`,
+			label: 'rs skybox pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._shader.module,

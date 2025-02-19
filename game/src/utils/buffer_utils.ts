@@ -34,18 +34,18 @@ export class BufferUtils {
 	static createEmptyBuffer(size: number, usage: number, label?: string) {
 		device.pushErrorScope('out-of-memory');
 
-		size = Math.ceil(size / 16) * 16;
+		const paddedSize = Math.ceil(size / 16) * 16;
 
 		const buffer = device.createBuffer({
 			label: label,
-			size: size,
+			size: paddedSize,
 			usage: usage,
 		});
 
 		device.popErrorScope().then(err => {
 			if (err) {
 				throw new BufferError(
-					`OUT OF MEMORY: Failed to allocate buffer of length ${size}] with usage ${usage}`,
+					`OUT OF MEMORY: Failed to allocate buffer of length ${paddedSize}] with usage ${usage}`,
 				);
 			}
 		});

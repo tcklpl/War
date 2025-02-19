@@ -32,7 +32,7 @@ export class RenderStageOutlineMask implements RenderStage {
 
 	private createMaskPipeline(windingOrder: 'cw' | 'ccw') {
 		return device.createRenderPipelineAsync({
-			label: `outline mask pipeline`,
+			label: 'outline mask pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._outlineMaskShader.module,

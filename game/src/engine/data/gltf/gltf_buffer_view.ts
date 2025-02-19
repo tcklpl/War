@@ -52,7 +52,7 @@ export class GLTFBufferView {
 				case this.ELEMENT_ARRAY_BUFFER:
 					return GPUBufferUsage.INDEX;
 				default:
-					throw new TypeError(`Trying to build buffer for non-mesh buffer view`);
+					throw new TypeError('Trying to build buffer for non-mesh buffer view');
 			}
 		};
 		const buffer = BufferUtils.createBuffer(new Uint8Array(slice), bufferUsage() | GPUBufferUsage.COPY_DST);

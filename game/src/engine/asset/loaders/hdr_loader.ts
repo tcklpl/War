@@ -137,8 +137,8 @@ export class HDRLoader {
 	}
 
 	private readLine(stream: DataStream): string {
-		let ch,
-			str = '';
+		let ch: number;
+		let str = '';
 
 		while ((ch = stream.data.getUint8(stream.offset++)) !== 0x0a) str += String.fromCharCode(ch);
 
@@ -147,7 +147,7 @@ export class HDRLoader {
 
 	private parseData(stream: DataStream, header: Header): Float32Array {
 		const hash = stream.data.getUint16(stream.offset);
-		let data;
+		let data: Float32Array;
 
 		if (hash === 0x0202) {
 			data = this.parseNewRLE(stream, header);
@@ -201,7 +201,7 @@ export class HDRLoader {
 				let e = comps[x + width * 3];
 
 				// NOT -128 but -136!!! This allows encoding smaller values rather than higher ones (as you'd expect).
-				e = e ? Math.pow(2.0, e - 136) : 0;
+				e = e ? 2.0 ** (e - 136) : 0;
 
 				tgt[i++] = r * e * colorCorr[0];
 				tgt[i++] = g * e * colorCorr[1];
@@ -213,9 +213,9 @@ export class HDRLoader {
 		return tgt;
 	}
 
-	private swap(data: Float32Array, i1: number, i2: number) {
-		i1 *= 4;
-		i2 *= 4;
+	private swap(data: Float32Array, pos1: number, pos2: number) {
+		const i1 = pos1 * 4;
+		const i2 = pos2 * 4;
 
 		for (let i = 0; i < 4; ++i) {
 			const tmp = data[i1 + i];

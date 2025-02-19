@@ -33,7 +33,7 @@ const CfgScreen: React.FC<IPropsCfgScreen> = ({ showReturnToMenu }) => {
 		return () => {
 			saveConfig();
 		};
-	}, [saveConfig, setCurrentConfigScreen]);
+	}, [saveConfig]);
 
 	return (
 		<Box

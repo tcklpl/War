@@ -36,7 +36,7 @@ describe('Performance HUD', () => {
 		expect(container).toBeEmptyDOMElement();
 	});
 
-	it(`renders performance hud`, async () => {
+	it('renders performance hud', async () => {
 		const mockUseGame = vi.mocked(useGame);
 		const mockUseGameSession = vi.mocked(useGameSession);
 		const mockUseConfig = vi.mocked(useConfig);

@@ -113,7 +113,7 @@ export class AssetManager extends Manager<Asset> {
 				asset = await this.loaders.gltf.constructGLTFAsset(assetRequestJson);
 			} else if (assetInfo.url.endsWith('.glb')) {
 				asset = await this.loaders.gltf.loadGLBAsset(await this.getAssetBuffer(k, assetInfo));
-			} else throw new BadGLTFFileError(`GLTF With unsupported filename extension (not .gltf or .glb)`);
+			} else throw new BadGLTFFileError('GLTF With unsupported filename extension (not .gltf or .glb)');
 
 			this.register(new GLTFAsset(k, assetInfo.url, asset));
 			if (onAssetLoadCallback) onAssetLoadCallback();

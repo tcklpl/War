@@ -44,7 +44,7 @@ export class RenderStageSolidGeometry implements RenderStage {
 
 	private createPipeline(windingOrder: 'cw' | 'ccw', hdrTextureFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: `rs solid geometry pipeline`,
+			label: 'rs solid geometry pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._principledShader.module,

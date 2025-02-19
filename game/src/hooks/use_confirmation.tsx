@@ -23,12 +23,9 @@ const ConfirmationContext = createContext<IConfirmationContext>({} as IConfirmat
 const ConfirmationProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 	const [confirmationQueue, setConfirmationQueue] = useState<ConfirmationRequestInfo[]>([]);
 
-	const enqueueConfirmation = useCallback(
-		(alert: ConfirmationRequestInfo) => {
-			setConfirmationQueue(queue => [...queue, alert]);
-		},
-		[setConfirmationQueue],
-	);
+	const enqueueConfirmation = useCallback((alert: ConfirmationRequestInfo) => {
+		setConfirmationQueue(queue => [...queue, alert]);
+	}, []);
 
 	const getCurrentConfirmation = useCallback(() => {
 		if (confirmationQueue.length === 0) return undefined;

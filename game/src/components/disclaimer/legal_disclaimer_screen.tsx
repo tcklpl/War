@@ -5,9 +5,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import style from './legal_disclaimer_screen.module.scss';
 
-type LegalDisclaimerScreenProps = {};
-
-const LegalDisclaimerScreen: FunctionComponent<LegalDisclaimerScreenProps> = () => {
+const LegalDisclaimerScreen: FunctionComponent = () => {
 	const { t } = useTranslation(['disclaimer']);
 	const [showScreen, setShowScreen] = useState(false);
 	const disclaimerVersion = 1;

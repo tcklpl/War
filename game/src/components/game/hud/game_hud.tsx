@@ -4,9 +4,7 @@ import HUDCommonPlayOrder from './common/play_order/hud_common_play_order';
 import HUDCommonTopInfo from './common/top_info/hud_common_top_info';
 import PauseScreen from './paused/pause_screen';
 
-type GameHudProps = {};
-
-const GameHud: FunctionComponent<GameHudProps> = () => {
+const GameHud: FunctionComponent = () => {
 	return (
 		<Box
 			display='flex'
@@ -30,7 +28,7 @@ const GameHud: FunctionComponent<GameHudProps> = () => {
 			</Box>
 
 			{/* Bottom HUD: Specific to each party */}
-			<Box></Box>
+			<Box />
 
 			{/* Other Game HUD Windows and utils */}
 			<PauseScreen />

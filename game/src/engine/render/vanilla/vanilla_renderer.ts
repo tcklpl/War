@@ -98,7 +98,7 @@ export class VanillaRenderer extends Renderer {
 			this._pickingBuffer.unmap();
 			game.engine.managers.io.mouseInteractionManager.notifyFramePickingID(id);
 		} catch {
-			console.warn(`Failed to get the picking buffer, probably due to the renderer being destructed`);
+			console.warn('Failed to get the picking buffer, probably due to the renderer being destructed');
 		}
 	}
 

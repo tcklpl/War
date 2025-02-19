@@ -10,8 +10,8 @@ import {
 } from '@mui/material';
 import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
-import './server_select.scss';
 import { useTranslation } from 'react-i18next';
+import './server_select.scss';
 
 const ServerSelectPasswordPrompt: React.FC<{
 	open: boolean;
@@ -23,6 +23,7 @@ const ServerSelectPasswordPrompt: React.FC<{
 
 	const [passwordError, setPasswordError] = useState('');
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: need to update based on "open"
 	useEffect(() => {
 		setPassword('');
 		setPasswordError('');

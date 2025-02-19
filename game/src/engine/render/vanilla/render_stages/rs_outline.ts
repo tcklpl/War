@@ -35,7 +35,7 @@ export class RenderStageOutline implements RenderStage {
 
 	private createOutlinePipeline() {
 		return device.createRenderPipelineAsync({
-			label: `outline compute pipeline`,
+			label: 'outline compute pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._outlineShader.module,

@@ -45,7 +45,7 @@ export class RenderStagePicking implements RenderStage {
 
 	private createPickingPipeline() {
 		return device.createRenderPipelineAsync({
-			label: `rs picking pipeline`,
+			label: 'rs picking pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._shader.module,

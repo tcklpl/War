@@ -16,13 +16,13 @@ export class Keyboard {
 	}
 
 	registerKeyListener(key: string, eventType: KeyEvent, cb: () => void) {
-		key = key.toLowerCase();
+		const lowerKey = key.toLowerCase();
 		const listeners = eventType === 'down' ? this._keyDownListeners : this._keyUpListeners;
-		const keyListeners = listeners.get(key);
+		const keyListeners = listeners.get(lowerKey);
 		if (keyListeners) {
 			keyListeners.push(cb);
 		} else {
-			listeners.set(key, [cb]);
+			listeners.set(lowerKey, [cb]);
 		}
 	}
 }

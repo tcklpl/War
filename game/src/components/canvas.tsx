@@ -61,7 +61,7 @@ const WarCanvas = memo(() => {
 		};
 	}, [setGameInstance, setEngineInitializationCrash, getContext]);
 
-	return <canvas ref={ref} className='war-canvas'></canvas>;
+	return <canvas ref={ref} className='war-canvas' />;
 });
 
 export default WarCanvas;

@@ -20,11 +20,10 @@ import GroupRemoveIcon from '@mui/icons-material/GroupRemove';
 import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
 import SaveIcon from '@mui/icons-material/Save';
 
-type PauseScreenProps = {};
 type PauseScreenText = { reason: string; descOwner: string; descOthers: string };
 type LobbyOwnerActions = 'keep paused' | 'save and exit' | 'move on';
 
-const PauseScreen: FunctionComponent<PauseScreenProps> = () => {
+const PauseScreen: FunctionComponent = () => {
 	const { t } = useTranslation(['ingame']);
 	const { palette } = useTheme();
 	const { enqueueConfirmation } = useConfirmation();

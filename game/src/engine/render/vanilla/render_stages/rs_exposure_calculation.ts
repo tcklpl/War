@@ -47,7 +47,7 @@ export class RenderStageExposureCalculation implements RenderStage {
 
 	private createComputePipeline(shader: Shader) {
 		return device.createComputePipelineAsync({
-			label: `rs pfx and tonemapping pipeline`,
+			label: 'rs pfx and tonemapping pipeline',
 			layout: 'auto',
 			compute: {
 				module: shader.module,

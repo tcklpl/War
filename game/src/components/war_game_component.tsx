@@ -20,6 +20,7 @@ const WarGameComponent: React.FC = () => {
 	const { displayConfig } = useConfig();
 	const [theme, setTheme] = useState(themeDefaultDark);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: need to filter theme
 	useEffect(() => {
 		let newTheme: Theme;
 		switch (displayConfig.theme) {

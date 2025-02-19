@@ -20,12 +20,12 @@ export class Texture {
 	}
 
 	get view() {
-		if (!this._view) throw new MissingTextureError(`Trying to get texture view before it was set`);
+		if (!this._view) throw new MissingTextureError('Trying to get texture view before it was set');
 		return this._view;
 	}
 
 	get texture() {
-		if (!this._tex) throw new MissingTextureError(`Trying to get texture before it was set`);
+		if (!this._tex) throw new MissingTextureError('Trying to get texture before it was set');
 		return this._tex;
 	}
 

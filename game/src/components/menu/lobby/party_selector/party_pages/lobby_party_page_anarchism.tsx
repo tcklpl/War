@@ -112,8 +112,8 @@ const LobbyPartyPageAnarchism = () => {
 											</Typography>
 										),
 									},
-								).map((frag, i) => (
-									<Fragment key={i}>{frag}</Fragment>
+								).map(frag => (
+									<Fragment key={frag?.toString()}>{frag}</Fragment>
 								))}
 							</Typography>
 						</TableCell>

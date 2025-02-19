@@ -16,7 +16,7 @@ const CrashProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) =
 			engineInitializationCrash,
 			setEngineInitializationCrash,
 		};
-	}, [engineInitializationCrash, setEngineInitializationCrash]);
+	}, [engineInitializationCrash]);
 
 	return <CrashContext.Provider value={crashMemo}>{children}</CrashContext.Provider>;
 };

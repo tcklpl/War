@@ -15,7 +15,7 @@ export class AnimationUtils {
 	 * @returns Interpolated Animation Value
 	 */
 	static interpolateValueLinear(a: AnimationValue, b: AnimationValue, factor: number): AnimationValue {
-		this.assertSameTypes(a, b);
+		AnimationUtils.assertSameTypes(a, b);
 		if (typeof a === 'number' && typeof b === 'number') {
 			return MathUtils.lerp(a, b, factor);
 		}
@@ -25,7 +25,7 @@ export class AnimationUtils {
 		if (a instanceof Quaternion && b instanceof Quaternion) {
 			return Quaternion.slerp(a, b, factor);
 		}
-		throw new UnsupportedAnimationStepValueError(`Unsupported animation target value for animation`);
+		throw new UnsupportedAnimationStepValueError('Unsupported animation target value for animation');
 	}
 
 	/**
@@ -49,7 +49,7 @@ export class AnimationUtils {
 		if (total instanceof Quaternion) {
 			return total.divideByFactor(duration).multiplyByFactor(deltaFrame);
 		}
-		throw new UnsupportedAnimationStepValueError(`Unsupported animation target value for animation`);
+		throw new UnsupportedAnimationStepValueError('Unsupported animation target value for animation');
 	}
 
 	/**
@@ -60,7 +60,7 @@ export class AnimationUtils {
 	 * @returns Sum of the two values
 	 */
 	static incrementAnimationValue(source: AnimationValue, increment: AnimationValue): AnimationValue {
-		this.assertSameTypes(source, increment);
+		AnimationUtils.assertSameTypes(source, increment);
 		if (typeof source === 'number' && typeof increment === 'number') {
 			return source + increment;
 		}
@@ -70,7 +70,7 @@ export class AnimationUtils {
 		if (source instanceof Quaternion && increment instanceof Quaternion) {
 			return source.add(increment);
 		}
-		throw new UnsupportedAnimationStepValueError(`Unsupported animation target value for animation`);
+		throw new UnsupportedAnimationStepValueError('Unsupported animation target value for animation');
 	}
 
 	/**
@@ -81,7 +81,7 @@ export class AnimationUtils {
 	 * @returns Difference between a and b
 	 */
 	static differenceBetweenValues(a: AnimationValue, b: AnimationValue): AnimationValue {
-		this.assertSameTypes(a, b);
+		AnimationUtils.assertSameTypes(a, b);
 		if (typeof a === 'number' && typeof b === 'number') {
 			return b - a;
 		}
@@ -91,7 +91,7 @@ export class AnimationUtils {
 		if (a instanceof Quaternion && b instanceof Quaternion) {
 			return b.subtract(a);
 		}
-		throw new UnsupportedAnimationStepValueError(`Unsupported animation target value for animation`);
+		throw new UnsupportedAnimationStepValueError('Unsupported animation target value for animation');
 	}
 
 	/**

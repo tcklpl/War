@@ -6,9 +6,7 @@ import { useTranslation } from 'react-i18next';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import SaveIcon from '@mui/icons-material/Save';
 
-type HUDCommonTopInfoProps = {};
-
-const HUDCommonTopInfo: FunctionComponent<HUDCommonTopInfoProps> = () => {
+const HUDCommonTopInfo: FunctionComponent = () => {
 	const { username, currentLobbyState, currentGameSession } = useGameSession();
 	const { t } = useTranslation(['common', 'ingame']);
 	const isLobbyOwner =
