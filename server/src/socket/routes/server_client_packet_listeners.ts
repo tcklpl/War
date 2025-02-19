@@ -1,9 +1,9 @@
-import { type Constructor } from '../../@types/utils';
-import { ConfigManager } from '../../config/config_manager';
-import { CryptManager } from '../../crypt/crypt_manager';
-import { GameServer } from '../../game/game_server';
-import { Player } from '../../game/player/player';
-import { Logger } from '../../log/logger';
+import type { Constructor } from '../../@types/utils';
+import type { ConfigManager } from '../../config/config_manager';
+import type { CryptManager } from '../../crypt/crypt_manager';
+import type { GameServer } from '../../game/game_server';
+import type { Player } from '../../game/player/player';
+import type { Logger } from '../../log/logger';
 import { PLGameAction } from './game/pl_game_action';
 import { PLGMoveOnGame } from './game/pl_move_on_game';
 import { PLGPause } from './game/pl_pause';
@@ -25,82 +25,82 @@ import { PLTransferLobbyOwnership } from './lobby/pl_transfer_lobby_ownership';
 import { PLCreateLobby } from './lobby_list/pl_create_lobby';
 import { PLJoinLobby } from './lobby_list/pl_join_lobby';
 import { PLRequestLobbies } from './lobby_list/pl_req_lobbies';
-import { PacketListener } from './packet_listener';
-import { type SocketRouteData } from './socket_route_data';
+import type { PacketListener } from './packet_listener';
+import type { SocketRouteData } from './socket_route_data';
 
 export class ServerClientPacketListeners {
-    private readonly _routeData: SocketRouteData;
-    private _active = true;
+	private readonly _routeData: SocketRouteData;
+	private _active = true;
 
-    constructor(
-        private readonly _player: Player,
-        gameServer: GameServer,
-        configManager: ConfigManager,
-        cryptManager: CryptManager,
-        private readonly _logger: Logger,
-    ) {
-        this._routeData = {
-            player: _player,
-            socket: _player.connection.socket,
-            gameServer,
-            configManager,
-            cryptManager,
-            logger: _logger,
-        };
-        this.initializePacketListeners();
-    }
+	constructor(
+		private readonly _player: Player,
+		gameServer: GameServer,
+		configManager: ConfigManager,
+		cryptManager: CryptManager,
+		private readonly _logger: Logger,
+	) {
+		this._routeData = {
+			player: _player,
+			socket: _player.connection.socket,
+			gameServer,
+			configManager,
+			cryptManager,
+			logger: _logger,
+		};
+		this.initializePacketListeners();
+	}
 
-    private initializePacketListeners() {
-        this._packetListeners = this._packetListenerRegistry.map(registry => new registry(this._routeData));
-    }
+	private initializePacketListeners() {
+		this._packetListeners = this._packetListenerRegistry.map(registry => new registry(this._routeData));
+	}
 
-    updatePlayerInstance(newPlayer: Player) {
-        this._routeData.player = newPlayer;
-        this._routeData.socket = newPlayer.connection.socket;
-    }
+	updatePlayerInstance(newPlayer: Player) {
+		this._routeData.player = newPlayer;
+		this._routeData.socket = newPlayer.connection.socket;
+	}
 
-    unregisterPacketListeners() {
-        this._player.connection.socket.offAny();
-        this._active = false;
-    }
+	unregisterPacketListeners() {
+		this._player.connection.socket.offAny();
+		this._active = false;
+	}
 
-    private readonly _packetListenerRegistry: Constructor<PacketListener>[] = [
-        // Lobby List
-        PLCreateLobby,
-        PLJoinLobby,
-        PLRequestLobbies,
+	private readonly _packetListenerRegistry: Constructor<PacketListener>[] = [
+		// Lobby List
+		PLCreateLobby,
+		PLJoinLobby,
+		PLRequestLobbies,
 
-        // Lobby
-        PLChatMessage,
-        PLSelectParty,
-        PLLeaveLobby,
-        PLDeselectParty,
-        PLKickPlayer,
-        PLModifyLobbyState,
-        PLTransferLobbyOwnership,
-        PLStartGame,
-        PLCancelGameStart,
+		// Lobby
+		PLChatMessage,
+		PLSelectParty,
+		PLLeaveLobby,
+		PLDeselectParty,
+		PLKickPlayer,
+		PLModifyLobbyState,
+		PLTransferLobbyOwnership,
+		PLStartGame,
+		PLCancelGameStart,
 
-        // Game
-        PLPing,
-        PLSelectStartingTerritory,
-        PLGameAction,
-        PLReconnectToGame,
+		// Game
+		PLPing,
+		PLSelectStartingTerritory,
+		PLGameAction,
+		PLReconnectToGame,
 
-        PLGPause,
-        PLGResume,
-        PLGSave,
-        PLGSaveAndQuit,
-        PLGMoveOnGame,
-    ];
+		PLGPause,
+		PLGResume,
+		PLGSave,
+		PLGSaveAndQuit,
+		PLGMoveOnGame,
+	];
 
-    private _packetListeners: PacketListener[] = [];
+	private _packetListeners: PacketListener[] = [];
 
-    get player() {
-        return this._player;
-    }
+	get player() {
+		return this._player;
+	}
 
-    get active() {
-        return this._active;
-    }
+	get active() {
+		return this._active;
+	}
 }

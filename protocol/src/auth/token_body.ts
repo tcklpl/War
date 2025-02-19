@@ -1,1 +1,1 @@
-export interface TokenBody {}
+export type TokenBody = {};

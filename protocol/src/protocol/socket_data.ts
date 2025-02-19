@@ -1,6 +1,5 @@
-
 export interface SocketData {
-    username: string;
-    ip: string;
-    token: string;
+	username: string;
+	ip: string;
+	token: string;
 }

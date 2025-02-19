@@ -1,34 +1,34 @@
-import { Game } from '../ingame/game';
-import { Party } from '../party/party';
+import type { Game } from '../ingame/game';
+import type { Party } from '../party/party';
 import { LobbyPlayer } from './lobby_player';
 import { Player } from './player';
-import { PlayerConnection } from './player_connection';
+import type { PlayerConnection } from './player_connection';
 
 export class GamePlayer extends Player {
-    online = true;
-    discarded = false;
+	online = true;
+	discarded = false;
 
-    constructor(
-        _username: string,
-        _connection: PlayerConnection,
-        private readonly _party: Party,
-        private readonly _game: Game,
-    ) {
-        super(_username, _connection);
-    }
+	constructor(
+		_username: string,
+		_connection: PlayerConnection,
+		private readonly _party: Party,
+		private readonly _game: Game,
+	) {
+		super(_username, _connection);
+	}
 
-    transformIntoLobbyPlayer() {
-        const lobbyPlayer = new LobbyPlayer(this.username, this.connection);
-        lobbyPlayer.packetListeners = this.packetListeners;
-        this.packetListeners.updatePlayerInstance(lobbyPlayer);
-        return lobbyPlayer;
-    }
+	transformIntoLobbyPlayer() {
+		const lobbyPlayer = new LobbyPlayer(this.username, this.connection);
+		lobbyPlayer.packetListeners = this.packetListeners;
+		this.packetListeners.updatePlayerInstance(lobbyPlayer);
+		return lobbyPlayer;
+	}
 
-    get party() {
-        return this._party;
-    }
+	get party() {
+		return this._party;
+	}
 
-    get game() {
-        return this._game;
-    }
+	get game() {
+		return this._game;
+	}
 }

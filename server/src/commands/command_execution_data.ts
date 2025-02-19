@@ -1,6 +1,6 @@
-import { WarServer } from '../war_server';
+import type { WarServer } from '../war_server';
 
 export interface CommandExecutionData {
-    args: string[];
-    server: WarServer;
+	args: string[];
+	server: WarServer;
 }

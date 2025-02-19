@@ -1,2 +1,1 @@
-
-export type GameError = "invalid action";
+export type GameError = 'invalid action';

@@ -1,6 +1,6 @@
-import { Config } from 'drizzle-kit';
+import type { Config } from 'drizzle-kit';
 
 export default {
-    dialect: 'sqlite',
-    schema: 'src/persistence/**/*.sql.ts',
+	dialect: 'sqlite',
+	schema: 'src/persistence/**/*.sql.ts',
 } satisfies Config;

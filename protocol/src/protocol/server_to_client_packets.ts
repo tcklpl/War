@@ -9,14 +9,10 @@ import type {
 	RoundState,
 	TerritoryCode,
 	TurnAllowedActions,
-} from "./data";
-import type { GameError } from "./data/ingame/game_error";
+} from './data';
+import type { GameError } from './data/ingame/game_error';
 
-export type LobbyCreationFailReason =
-	| "full"
-	| "unavailable name"
-	| "already owner"
-	| "other";
+export type LobbyCreationFailReason = 'full' | 'unavailable name' | 'already owner' | 'other';
 
 export interface ServerToClientPackets {
 	/*
@@ -52,17 +48,12 @@ export interface ServerToClientPackets {
 	gGameSessionConnectionToken: (token: string) => void;
 
 	// Territory selection
-	gInitialTerritorySelectionTurn: (
-		currentPlayer: string,
-		timeout: number,
-	) => void;
-	gInitialTerritorySelectionAllowedTerritories: (
-		allowed: TerritoryCode[],
-	) => void;
+	gInitialTerritorySelectionTurn: (currentPlayer: string, timeout: number) => void;
+	gInitialTerritorySelectionAllowedTerritories: (allowed: TerritoryCode[]) => void;
 	gInitialTerritorySelectionAssignment: (
 		player: string,
 		territory: TerritoryCode,
-		reason: "selected" | "timeout",
+		reason: 'selected' | 'timeout',
 	) => void;
 
 	gUpdateRoundState: (state: RoundState) => void;

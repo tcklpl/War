@@ -1,20 +1,20 @@
-import { type TerritoryCode, type TurnAllowedActions, type TurnPhase } from ':protocol';
+import type { TerritoryCode, TurnAllowedActions, TurnPhase } from ':protocol';
 import { Party } from './party';
 
 export class PartyCapitalism extends Party {
-    constructor() {
-        super('capitalism');
-    }
+	constructor() {
+		super('capitalism');
+	}
 
-    get startingTerritories(): 'any' | TerritoryCode[] {
-        return ['california'];
-    }
+	get startingTerritories(): 'any' | TerritoryCode[] {
+		return ['california'];
+	}
 
-    calculateAllowedTurnActionsForPhase(_phase: TurnPhase): TurnAllowedActions {
-        throw new Error('Method not implemented.');
-    }
+	calculateAllowedTurnActionsForPhase(_phase: TurnPhase): TurnAllowedActions {
+		throw new Error('Method not implemented.');
+	}
 
-    checkWinCondition(): boolean {
-        return false;
-    }
+	checkWinCondition(): boolean {
+		return false;
+	}
 }

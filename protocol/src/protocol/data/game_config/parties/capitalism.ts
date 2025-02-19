@@ -1,148 +1,145 @@
-import { PartyConfig } from "./party_config";
+import type { PartyConfig } from './party_config';
 
 export interface PartyConfigCapitalism extends PartyConfig {
+	passive: {
+		/**
+		 * Number of troops gained with each territory trade.
+		 */
+		troop_gain_per_territory_trade: number;
+	};
 
-    passive: {
-        /**
-         * Number of troops gained with each territory trade.
-         */
-        troop_gain_per_territory_trade: number;
-    }
+	bonus: {
+		/**
+		 * Multiplier to the continental bonus.
+		 */
+		continental_bonus_multiplier: number;
+	};
 
-    bonus: {
-        /**
-         * Multiplier to the continental bonus.
-         */
-        continental_bonus_multiplier: number;
-    }
+	debuffs: {
+		/**
+		 * Number of sequential loses to initiate a crisis.
+		 */
+		crisis_sequential_loses: number;
 
-    debuffs: {
+		/**
+		 * Turns that the capitalist territories will be in crisis.
+		 */
+		crisis_duration: number;
+	};
 
-        /**
-         * Number of sequential loses to initiate a crisis.
-         */
-        crisis_sequential_loses: number;
+	special_units: {
+		john_keynes: {
+			/**
+			 * Unit hit points.
+			 */
+			hp: number;
 
-        /**
-         * Turns that the capitalist territories will be in crisis.
-         */
-        crisis_duration: number;
-    }
+			/**
+			 * Unit max HP
+			 */
+			max_hp: number;
 
-    special_units: {
+			/**
+			 * John Keynes territory troop multiplication factor.
+			 */
+			troop_multiplier: number;
 
-        john_keynes: {
-            /**
-             * Unit hit points.
-             */
-            hp: number;
+			/**
+			 * Troop multiplication turn cooldown.
+			 */
+			troop_multiplication_cooldown: number;
+		};
 
-            /**
-             * Unit max HP
-             */
-            max_hp: number;
+		ray_croc: {
+			/**
+			 * Unit hit points.
+			 */
+			hp: number;
 
-            /**
-             * John Keynes territory troop multiplication factor.
-             */
-            troop_multiplier: number;
+			/**
+			 * Unit max HP
+			 */
+			max_hp: number;
 
-            /**
-             * Troop multiplication turn cooldown.
-             */
-            troop_multiplication_cooldown: number;
-        }
+			/**
+			 * Cooldown to force some party to sell a country for 1 troop.
+			 */
+			force_country_buy_cooldown: number;
+		};
 
-        ray_croc: {
-            /**
-             * Unit hit points.
-             */
-            hp: number;
+		mark_zuckerberg: {
+			/**
+			 * Unit hit points.
+			 */
+			hp: number;
 
-            /**
-             * Unit max HP
-             */
-            max_hp: number;
+			/**
+			 * Unit max HP
+			 */
+			max_hp: number;
 
-            /**
-             * Cooldown to force some party to sell a country for 1 troop.
-             */
-            force_country_buy_cooldown: number;
-        }
+			/**
+			 * Number of troops that will be converted per turn.
+			 */
+			social_network_troop_conversion_rate: number;
 
-        mark_zuckerberg: {
-            /**
-             * Unit hit points.
-             */
-            hp: number;
+			/**
+			 * Cooldown to create a social network in another country.
+			 */
+			create_social_network_cooldown: number;
+		};
 
-            /**
-             * Unit max HP
-             */
-            max_hp: number;
+		steve_jobs: {
+			/**
+			 * Unit hit points.
+			 */
+			hp: number;
 
-            /**
-             * Number of troops that will be converted per turn.
-             */
-            social_network_troop_conversion_rate: number;
+			/**
+			 * Unit max HP
+			 */
+			max_hp: number;
 
-            /**
-             * Cooldown to create a social network in another country.
-             */
-            create_social_network_cooldown: number;
-        }
+			/**
+			 * Number of troops that will be invalidated per turn.
+			 */
+			troop_invalidation_rate: number;
 
-        steve_jobs: {
-            /**
-             * Unit hit points.
-             */
-            hp: number;
+			/**
+			 * Cooldown to create another Store.
+			 */
+			create_store_cooldown: number;
+		};
 
-            /**
-             * Unit max HP
-             */
-            max_hp: number;
+		donald_trump: {
+			/**
+			 * Unit hit points.
+			 */
+			hp: number;
 
-            /**
-             * Number of troops that will be invalidated per turn.
-             */
-            troop_invalidation_rate: number;
+			/**
+			 * Unit max HP
+			 */
+			max_hp: number;
 
-            /**
-             * Cooldown to create another Store.
-             */
-            create_store_cooldown: number;
-        }
+			/**
+			 * Territory defense modifier when Trump is in the territory.
+			 */
+			territory_defense_modifier: number;
+		};
+	};
 
-        donald_trump: {
-            /**
-             * Unit hit points.
-             */
-            hp: number;
+	special_abilities: {
+		privatization: {
+			/**
+			 * Cooldown to try another privatization
+			 */
+			cooldown: number;
 
-            /**
-             * Unit max HP
-             */
-            max_hp: number;
-
-            /**
-             * Territory defense modifier when Trump is in the territory.
-             */
-            territory_defense_modifier: number;
-        }
-    }
-
-    special_abilities: {
-        privatization: {
-            /**
-             * Cooldown to try another privatization
-             */
-            cooldown: number;
-
-            /**
-             * Allow control of special units.
-             */
-            allow_using_specials: boolean;
-        }
-    }
+			/**
+			 * Allow control of special units.
+			 */
+			allow_using_specials: boolean;
+		};
+	};
 }

@@ -1,14 +1,14 @@
-import { type GameSocket } from '../../@types/server_socket';
-import { ServerPacket, type ServerPacketEventNames } from '../../socket/packet/server_packet';
+import type { GameSocket } from '../../@types/server_socket';
+import type { ServerPacket, ServerPacketEventNames } from '../../socket/packet/server_packet';
 
 export class PlayerConnection {
-    constructor(private readonly _socket: GameSocket) {}
+	constructor(private readonly _socket: GameSocket) {}
 
-    emitPacket<T extends ServerPacketEventNames>(pkt: ServerPacket<T>) {
-        this._socket.emit(pkt.key, ...pkt.params);
-    }
+	emitPacket<T extends ServerPacketEventNames>(pkt: ServerPacket<T>) {
+		this._socket.emit(pkt.key, ...pkt.params);
+	}
 
-    get socket() {
-        return this._socket;
-    }
+	get socket() {
+		return this._socket;
+	}
 }

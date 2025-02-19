@@ -1,22 +1,18 @@
-import { GameConfig } from "./game_config";
-import { GameParty } from "./game_party";
+import type { GameConfig } from './game_config';
+import type { GameParty } from './game_party';
 
 export interface LobbyState {
+	name: string;
+	joinable: boolean;
 
-    name: string;
-    joinable: boolean;
+	players: LobbyPlayerState[];
+	selectable_parties: GameParty[];
 
-    players: LobbyPlayerState[];
-    selectable_parties: GameParty[];
-
-    game_config: GameConfig;
-
+	game_config: GameConfig;
 }
 
 export interface LobbyPlayerState {
-
-    name: string;
-    is_lobby_owner: boolean;
-    party: GameParty;
-
+	name: string;
+	is_lobby_owner: boolean;
+	party: GameParty;
 }

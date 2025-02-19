@@ -1,23 +1,23 @@
-import { type GameParty } from ':protocol';
-import { GamePlayer } from '../../game/player/game_player';
-import { GameSave } from './game_save';
+import type { GameParty } from ':protocol';
+import type { GamePlayer } from '../../game/player/game_player';
+import type { GameSave } from './game_save';
 
 export class GamePlayerSave {
-    id!: number;
+	id!: number;
 
-    username!: string;
+	username!: string;
 
-    game!: GameSave;
+	game!: GameSave;
 
-    owner!: boolean;
+	owner!: boolean;
 
-    party!: GameParty;
+	party!: GameParty;
 
-    fromGamePlayerAndGameSave(gp: GamePlayer, gs: GameSave) {
-        this.username = gp.username;
-        this.game = gs;
-        this.owner = gp.game.isOwner(gp);
-        this.party = gp.party.protocolValue;
-        return this;
-    }
+	fromGamePlayerAndGameSave(gp: GamePlayer, gs: GameSave) {
+		this.username = gp.username;
+		this.game = gs;
+		this.owner = gp.game.isOwner(gp);
+		this.party = gp.party.protocolValue;
+		return this;
+	}
 }
