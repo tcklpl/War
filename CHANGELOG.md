@@ -28,6 +28,10 @@ Icons:
 - 🎮 Game now has animations in the UI.
 - 🎮🔩 Created a Game event system.
 
+### 🔨 Fixed
+
+- 🎮🔩 Fixed engine breaking due to chromium 135 dropping support for depth texture sampling.
+
 ### 🔧 Changed
 
 - 🎮🔩 Updated game to use `verbatimModuleSyntax`.

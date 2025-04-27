@@ -68,8 +68,10 @@ struct Kernel {
 @group(1) @binding(1) var<uniform> kernel: Kernel;
 
 fn VSPositionFromDepth(uv: vec2f) -> vec3f {
+    var depth_dimensions = textureDimensions(depth_texture);
+    var texel_coords = vec2u(uv * vec2f(depth_dimensions));
     // Get the depth value for this pixel
-    var z = textureSample(depth_texture, clamp_sampler, uv);  
+    var z = textureLoad(depth_texture, texel_coords, 0);  
     // Get x/w and y/w from the viewport position
     var x = uv.x * 2.0 - 1.0;
     var y = (1.0 - uv.y) * 2.0 - 1.0;

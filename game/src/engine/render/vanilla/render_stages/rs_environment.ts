@@ -38,7 +38,7 @@ export class RenderStageEnvironment implements RenderStage {
 
 	private createPipeline(hdrFormat: GPUTextureFormat) {
 		return device.createRenderPipelineAsync({
-			label: 'rs ssao pipeline',
+			label: 'environment pipeline',
 			layout: 'auto',
 			vertex: {
 				module: this._shader.module,
@@ -78,7 +78,7 @@ export class RenderStageEnvironment implements RenderStage {
 
 	private createVariablesBindGroup() {
 		return device.createBindGroup({
-			label: 'environment variables bind group',
+			label: 'environment variable bind group',
 			layout: this._pipeline.getBindGroupLayout(EnvironmentShader.BINDING_GROUPS.VARIABLES),
 			entries: [{ binding: 0, resource: { buffer: this._variablesBuffer } }],
 		});
@@ -86,7 +86,7 @@ export class RenderStageEnvironment implements RenderStage {
 
 	private createTexturesBindGroup(pool: RenderResourcePool) {
 		return device.createBindGroup({
-			label: 'environment textures bind group',
+			label: 'environment texture bind group',
 			layout: this._pipeline.getBindGroupLayout(EnvironmentShader.BINDING_GROUPS.TEXTURES),
 			entries: [
 				{ binding: 0, resource: this._sampler },

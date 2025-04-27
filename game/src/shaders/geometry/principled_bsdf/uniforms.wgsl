@@ -36,6 +36,5 @@ struct PointLights {
     lights: array<PointLightInfo, MAX_POINT_LIGHTS>
 };
 @group(3) @binding(1) var<uniform> pointLights: PointLights;
-@group(3) @binding(2) var sceneSampler: sampler;
-@group(3) @binding(3) var sceneShadowAtlas: texture_depth_2d;
+@group(3) @binding(2) var sceneShadowAtlas: texture_depth_2d;
 

@@ -58,17 +58,19 @@ fn vertex(@builtin(vertex_index) vertexIndex : u32) -> VSOutput {
 @group(1) @binding(0) var iblPrefiltered: texture_cube<f32>;
 @group(1) @binding(1) var iblLUT: texture_2d<f32>;
 
-struct EnviromentVariables {
+struct EnvironmentVariables {
     proj: mat4x4f,
     proj_inverse: mat4x4f,
     view_inverse: mat4x4f
 };
-@group(2) @binding(0) var<uniform> env: EnviromentVariables;
+@group(2) @binding(0) var<uniform> env: EnvironmentVariables;
 
 
 fn VSPositionFromDepth(uv: vec2f) -> vec3f {
+    var depth_dimensions = textureDimensions(depth_texture);
+    var texel_coords = vec2u(uv * vec2f(depth_dimensions));
     // Get the depth value for this pixel
-    var z = textureSample(depth_texture, env_sampler, uv);  
+    var z = textureLoad(depth_texture, texel_coords, 0);  
     // Get x/w and y/w from the viewport position
     var x = uv.x * 2.0 - 1.0;
     var y = (1.0 - uv.y) * 2.0 - 1.0;

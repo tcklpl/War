@@ -6,7 +6,10 @@
 
 fn sampleShadowMapAtlasConstricted(uv: vec2f, uv_min: vec2f, uv_max: vec2f) -> f32 {
     var actualUV = clamp(uv, uv_min, uv_max);
-    return textureSample(sceneShadowAtlas, sceneSampler, actualUV);
+
+    var atlas_dimensions = textureDimensions(sceneShadowAtlas);
+    var texel_coords = vec2u(actualUV * vec2f(atlas_dimensions));
+    return textureLoad(sceneShadowAtlas, texel_coords, 0); 
 }
 
 /*

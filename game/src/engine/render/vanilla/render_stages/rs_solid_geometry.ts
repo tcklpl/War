@@ -15,13 +15,6 @@ export class RenderStageSolidGeometry implements RenderStage {
 	private readonly _meshDrawOptions = new PrimitiveDrawOptions().includeAll();
 	private _sceneBindGroupOptions!: SceneInfoBindGroupOptions;
 
-	private readonly _repeatSampler = device.createSampler({
-		addressModeU: 'repeat',
-		addressModeV: 'repeat',
-		minFilter: 'linear',
-		magFilter: 'linear',
-	});
-
 	async initialize(resources: RenderInitializationResources) {
 		await new Promise<void>(r => {
 			this._principledShader = new PrincipledBSDFShader('rs principled bsdf', () => r());
@@ -30,10 +23,7 @@ export class RenderStageSolidGeometry implements RenderStage {
 		this._sceneBindGroupOptions = new SceneInfoBindGroupOptions(PrincipledBSDFShader.BINDING_GROUPS.SCENE_INFO)
 			.includeDirectionalLights(0)
 			.includePointLights(1)
-			.includeExtras([
-				{ binding: 2, resource: this._repeatSampler },
-				{ binding: 3, resource: resources.renderResourcePool.shadowMapAtlas.texture.view },
-			]);
+			.includeExtras([{ binding: 2, resource: resources.renderResourcePool.shadowMapAtlas.texture.view }]);
 
 		this._pipelineCW = await this.createPipeline('cw', resources.renderResourcePool.hdrTextureFormat);
 		this._pipelineCCW = await this.createPipeline('ccw', resources.renderResourcePool.hdrTextureFormat);
