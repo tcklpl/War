@@ -1,5 +1,5 @@
 import { useCrash } from ':hooks/use_crash';
-import { Box, Container, Grid2, Stack, Typography } from '@mui/material';
+import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import type React from 'react';
 import { useTranslation } from 'react-i18next';
 import './failed_to_start_engine_screen.scss';
@@ -13,7 +13,7 @@ const FailedToStartEngineScreen: React.FC = () => {
 		engineInitializationCrash && (
 			<Container maxWidth='md'>
 				<Box className='failed-to-initialize-engine-screen'>
-					<Grid2 container direction='column' justifyContent='center' alignItems='center' height='100%'>
+					<Grid container direction='column' justifyContent='center' alignItems='center' height='100%'>
 						<Stack spacing={10} alignItems='center' direction='row'>
 							<img src={logo} alt='' />
 
@@ -25,7 +25,7 @@ const FailedToStartEngineScreen: React.FC = () => {
 								<Typography style={{ opacity: 0.5 }}>{engineInitializationCrash.message}</Typography>
 							</Stack>
 						</Stack>
-					</Grid2>
+					</Grid>
 				</Box>
 			</Container>
 		)

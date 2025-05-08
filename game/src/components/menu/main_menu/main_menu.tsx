@@ -1,7 +1,7 @@
 import { useAlert } from ':hooks/use_alert';
 import { useGame } from ':hooks/use_game';
 import { useGameSession } from ':hooks/use_game_session';
-import { Box, Button, ButtonGroup, CircularProgress, Grid2, Stack, Typography } from '@mui/material';
+import { Box, Button, ButtonGroup, CircularProgress, Grid, Stack, Typography } from '@mui/material';
 import type React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -82,7 +82,7 @@ const MainMenu: React.FC = () => {
 	};
 
 	return (
-		<Grid2 container style={{ height: '100vh' }} justifyContent='center' alignContent='center'>
+		<Grid container style={{ height: '100vh' }} justifyContent='center' alignContent='center'>
 			<Stack spacing={2}>
 				<PlayerNameBox />
 				{reconnectionInfo && (
@@ -131,7 +131,7 @@ const MainMenu: React.FC = () => {
 					{__APP_VERSION__}
 				</Typography>
 			</Box>
-		</Grid2>
+		</Grid>
 	);
 };
 

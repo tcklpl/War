@@ -19,7 +19,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import {
 	Box,
 	Divider,
-	Grid2,
+	Grid,
 	IconButton,
 	List,
 	ListItem,
@@ -85,7 +85,7 @@ const LobbyScreen: React.FC = () => {
 	]);
 
 	return (
-		<Grid2
+		<Grid
 			className='lobby-screen'
 			style={{ backgroundColor: palette.background.default }}
 			justifyContent='center'
@@ -95,8 +95,8 @@ const LobbyScreen: React.FC = () => {
 			{currentLobby && currentLobbyState ? (
 				<Box display='flex' flexDirection='column' height='100%' width='100%'>
 					<Box display='flex' flexGrow={1} height='100%' width='100%'>
-						<Grid2 container position='relative' flexGrow='1'>
-							<Grid2 size={3} display='flex' height='100%' flexDirection='column' padding={2}>
+						<Grid container position='relative' flexGrow='1'>
+							<Grid size={3} display='flex' height='100%' flexDirection='column' padding={2}>
 								<Typography sx={{ marginBottom: '1em' }}>
 									<PersonIcon sx={{ verticalAlign: 'middle' }} /> {t('lobby:player_list')}
 								</Typography>
@@ -168,9 +168,9 @@ const LobbyScreen: React.FC = () => {
 								<Box maxHeight='500px'>
 									<LobbyChatBox />
 								</Box>
-							</Grid2>
+							</Grid>
 
-							<Grid2 size={9} display='flex' height='100%' flexDirection='column'>
+							<Grid size={9} display='flex' height='100%' flexDirection='column'>
 								<TabContext value={infoTab}>
 									<Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
 										<TabList onChange={(_, val) => setInfoTab(val)}>
@@ -255,14 +255,14 @@ const LobbyScreen: React.FC = () => {
 										)}
 									</Box>
 								</TabContext>
-							</Grid2>
-						</Grid2>
+							</Grid>
+						</Grid>
 					</Box>
 				</Box>
 			) : (
 				<>{t('lobby:loading_lobby_data')}</>
 			)}
-		</Grid2>
+		</Grid>
 	);
 };
 

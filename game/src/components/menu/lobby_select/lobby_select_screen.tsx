@@ -1,5 +1,5 @@
 import { useGameSession } from ':hooks/use_game_session';
-import { Box, Button, Container, Grid2, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, Typography, useTheme } from '@mui/material';
 import type React from 'react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -44,7 +44,7 @@ const LobbySelectScreen: React.FC = () => {
 
 	return (
 		<Container>
-			<Grid2
+			<Grid
 				container
 				className={style.screen}
 				style={{ backgroundColor: palette.background.default }}
@@ -81,16 +81,16 @@ const LobbySelectScreen: React.FC = () => {
 
 					<Box flex='1 1 auto'>
 						{lobbies?.lobbies.length ? (
-							<Grid2 container spacing={{ xs: 2 }}>
+							<Grid container spacing={{ xs: 2 }}>
 								{lobbies.lobbies.map(lobby => (
-									<Grid2 key={lobby.name} size={{ xs: 4 }}>
+									<Grid key={lobby.name} size={{ xs: 4 }}>
 										<LobbyCard
 											lobby={lobby}
 											onJoinAttempt={() => gameInstance?.state.server?.joinLobby(lobby.name)}
 										/>
-									</Grid2>
+									</Grid>
 								))}
-							</Grid2>
+							</Grid>
 						) : (
 							<Box
 								display='flex'
@@ -108,7 +108,7 @@ const LobbySelectScreen: React.FC = () => {
 						)}
 					</Box>
 				</Stack>
-			</Grid2>
+			</Grid>
 		</Container>
 	);
 };

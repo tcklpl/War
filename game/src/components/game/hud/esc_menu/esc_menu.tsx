@@ -1,6 +1,6 @@
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Button, Grid2, Stack, useTheme } from '@mui/material';
+import { Button, Grid, Stack, useTheme } from '@mui/material';
 import type { ReactNode } from 'react';
 import type React from 'react';
 import { useEffect, useState } from 'react';
@@ -28,8 +28,8 @@ const EscMenu: React.FC = () => {
 	}, [open]);
 
 	return open ? (
-		<Grid2 container className={style.screen} width={'100%'}>
-			<Grid2
+		<Grid container className={style.screen} width={'100%'}>
+			<Grid
 				size={{ xs: 4, md: 2 }}
 				className={style.categories}
 				style={{ backgroundColor: palette.background.default }}
@@ -59,10 +59,10 @@ const EscMenu: React.FC = () => {
 						Settings
 					</Button>
 				</Stack>
-			</Grid2>
+			</Grid>
 
-			<Grid2 size={{ xs: 8, md: 10 }}>{currentRightScreen}</Grid2>
-		</Grid2>
+			<Grid size={{ xs: 8, md: 10 }}>{currentRightScreen}</Grid>
+		</Grid>
 	) : (
 		<></>
 	);

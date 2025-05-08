@@ -1,7 +1,7 @@
 import { useConfig } from ':hooks/use_config';
 import {
 	Box,
-	Grid2,
+	Grid,
 	Grow,
 	MenuItem,
 	Select,
@@ -66,8 +66,8 @@ const CfgGraphicsScreen: React.FC = () => {
 	}, [shadowQuality]);
 
 	return (
-		<Grid2 container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
-			<Grid2 size={{ xs: 8 }}>
+		<Grid container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
+			<Grid size={{ xs: 8 }}>
 				<Grow in timeout={100}>
 					<Typography variant='h5'>{t('config:graphics_rendering')}</Typography>
 				</Grow>
@@ -230,12 +230,12 @@ const CfgGraphicsScreen: React.FC = () => {
 						</ConfigLabel>
 					</TableBody>
 				</Table>
-			</Grid2>
+			</Grid>
 
-			<Grid2 size={{ xs: 4 }}>
+			<Grid size={{ xs: 4 }}>
 				<CfgTooltip currentTooltip={currentTooltip} />
-			</Grid2>
-		</Grid2>
+			</Grid>
+		</Grid>
 	);
 };
 

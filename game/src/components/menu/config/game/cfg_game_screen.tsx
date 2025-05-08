@@ -1,5 +1,5 @@
 import { useConfig } from ':hooks/use_config';
-import { Grid2, Grow, Switch, Table, TableBody, Typography, useTheme } from '@mui/material';
+import { Grid, Grow, Switch, Table, TableBody, Typography, useTheme } from '@mui/material';
 import type React from 'react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -68,8 +68,8 @@ const CfgGameScreen: React.FC = () => {
 		);
 
 	return (
-		<Grid2 container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
-			<Grid2 size={{ xs: 8 }}>
+		<Grid container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
+			<Grid size={{ xs: 8 }}>
 				<Grow in timeout={100}>
 					<Typography variant='h5'>{t('config:game_loading')}</Typography>
 				</Grow>
@@ -90,12 +90,12 @@ const CfgGameScreen: React.FC = () => {
 						</ConfigLabel>
 					</TableBody>
 				</Table>
-			</Grid2>
+			</Grid>
 
-			<Grid2 size={{ xs: 4 }}>
+			<Grid size={{ xs: 4 }}>
 				<CfgTooltip currentTooltip={currentTooltip} />
-			</Grid2>
-		</Grid2>
+			</Grid>
+		</Grid>
 	);
 };
 

@@ -1,4 +1,4 @@
-import { Box, Container, Grid2, IconButton, Link, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Container, Grid, IconButton, Link, Stack, Typography, useTheme } from '@mui/material';
 import type { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
@@ -65,7 +65,7 @@ const CreditsScreen: FunctionComponent = () => {
 	return (
 		<Box sx={{ height: '100%', overflowY: 'auto' }}>
 			<Container>
-				<Grid2
+				<Grid
 					container
 					className='server-select-screen'
 					style={{ backgroundColor: palette.background.default }}
@@ -225,7 +225,7 @@ const CreditsScreen: FunctionComponent = () => {
 							</Stack>
 						</Box>
 					</Stack>
-				</Grid2>
+				</Grid>
 			</Container>
 		</Box>
 	);

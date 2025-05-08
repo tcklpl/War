@@ -4,7 +4,7 @@ import {
 	Button,
 	CircularProgress,
 	Container,
-	Grid2,
+	Grid,
 	Paper,
 	Stack,
 	Table,
@@ -189,7 +189,7 @@ const ServerSelectScreen: React.FC = () => {
 				if (e.target === e.currentTarget) setSelectedServer(undefined);
 			}}
 		>
-			<Grid2
+			<Grid
 				container
 				className='server-select-screen'
 				style={{ backgroundColor: palette.background.default }}
@@ -197,13 +197,13 @@ const ServerSelectScreen: React.FC = () => {
 				alignContent='center'
 			>
 				<Stack spacing={5} width='100%'>
-					<Grid2>
+					<Grid>
 						<Typography variant='h4'>
 							<PublicIcon style={{ marginRight: '0.5em', fontSize: '1em', verticalAlign: 'middle' }} />
 							{t('server_list:server_list')}
 						</Typography>
 						<Typography variant='caption'>{`${t('common:playing_as')} ${username}`}</Typography>
-					</Grid2>
+					</Grid>
 
 					<ServerSelectConnectionInfo
 						open={serverConInfoOpen}
@@ -362,7 +362,7 @@ const ServerSelectScreen: React.FC = () => {
 						</Button>
 					</Stack>
 				</Stack>
-			</Grid2>
+			</Grid>
 		</Container>
 	);
 };

@@ -1,7 +1,7 @@
 import { useConfig } from ':hooks/use_config';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { Grid2, Grow, MenuItem, Select, Stack, Switch, Table, TableBody, Typography, useTheme } from '@mui/material';
+import { Grid, Grow, MenuItem, Select, Stack, Switch, Table, TableBody, Typography, useTheme } from '@mui/material';
 import type React from 'react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -34,8 +34,8 @@ const CfgDisplayScreen: React.FC = () => {
 	}, [showPerformance]);
 
 	return (
-		<Grid2 container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
-			<Grid2 size={{ xs: 8 }}>
+		<Grid container style={{ backgroundColor: palette.background.default }} className='cfg-display-screen'>
+			<Grid size={{ xs: 8 }}>
 				<Grow in timeout={100}>
 					<Typography variant='h5'>{t('config:visual')}</Typography>
 				</Grow>
@@ -134,12 +134,12 @@ const CfgDisplayScreen: React.FC = () => {
 						</ConfigLabel>
 					</TableBody>
 				</Table>
-			</Grid2>
+			</Grid>
 
-			<Grid2 size={{ xs: 4 }}>
+			<Grid size={{ xs: 4 }}>
 				<CfgTooltip currentTooltip={currentTooltip} />
-			</Grid2>
-		</Grid2>
+			</Grid>
+		</Grid>
 	);
 };
 

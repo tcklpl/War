@@ -37,6 +37,7 @@ Icons:
 - 🎮🔩 Updated game to use `verbatimModuleSyntax`.
 - 🎮🖥🔩⬆️ Updated all dependencies to their latest version.
 - 🎮🖥🔩 Replaced eslint + prettier with biome.
+- 🎮🔩 Updated game UI to use MUI `Grid`, as `Grid2` is now the default `Grid`.
 
 ## [0.5.0] - 2024-12-01
 
