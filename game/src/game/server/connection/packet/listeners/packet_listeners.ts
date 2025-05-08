@@ -8,6 +8,9 @@ import { PLInitialGameState } from './game/pl_initial_game_state';
 import { PLPlayerDisconnected } from './game/pl_player_disconnected';
 import { PLPlayerReconnected } from './game/pl_player_reconnected';
 import { PLPrematureGameEnd } from './game/pl_premature_game_end';
+import { PLGameInitialTerritorySelectionAllowedTerritories } from './game/territory_selection/pl_select_allowed_territories';
+import { PLGameInitialTerritorySelectionAssignment } from './game/territory_selection/pl_select_assignment';
+import { PLGameInitialTerritorySelectionTurn } from './game/territory_selection/pl_select_turn';
 import { PLChat } from './lobby/pl_chat';
 import { PLGameStartCancelled } from './lobby/pl_game_start_cancelled';
 import { PLJoinedLobby } from './lobby/pl_joined_lobby';
@@ -33,9 +36,9 @@ export const registerPacketListeners = (socket: GameSocket, server: WarServer) =
 		new PLInitialGameState(socket, server),
 		// TODO: gUpdateGameStage
 		new PLGameConnectionToken(socket, server),
-		// TODO: gInitialTerritorySelectionTurn
-		// TODO: gInitialTerritorySelectionAllowedTerritories
-		// TODO: gInitialTerritorySelectionAssignment
+		new PLGameInitialTerritorySelectionTurn(socket, server),
+		new PLGameInitialTerritorySelectionAllowedTerritories(socket, server),
+		new PLGameInitialTerritorySelectionAssignment(socket, server),
 
 		// TODO: gUpdateRoundState
 		// TODO: gTurnAllowedActions
