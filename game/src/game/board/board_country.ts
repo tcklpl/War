@@ -1,4 +1,3 @@
-import { MappedRegionSize } from ':engine/data/atlas/mapped_region_size';
 import { Entity } from ':engine/data/entity/entity';
 import { EntityFlag } from ':engine/data/entity/entity_flag';
 import { PointLight } from ':engine/data/lights/point_light';
@@ -22,8 +21,6 @@ export class BoardCountry extends BoardCountryBase {
 			castsShadows: false,
 			range: 1000,
 			radius: 10,
-			shadowMapSize: MappedRegionSize.SMALL,
-			shadowMapCanShrink: true,
 		},
 		false,
 	);
