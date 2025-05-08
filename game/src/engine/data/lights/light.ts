@@ -3,7 +3,7 @@ import type { MappedRegionSize } from '../atlas/mapped_region_size';
 import type { Mat4 } from '../mat/mat4';
 import type { Vec3 } from '../vec/vec3';
 
-export interface LightProperties {
+type BaseLightProperties = {
 	name: string;
 	position: Vec3;
 	color: Vec3;
@@ -15,6 +15,14 @@ export interface LightProperties {
 	 * If the light can cast shadows.
 	 */
 	castsShadows: boolean;
+};
+
+type LightPropertiesNoShadow = BaseLightProperties & {
+	castsShadows: false;
+};
+
+type LightPropertiesWithShadow = BaseLightProperties & {
+	castsShadows: true;
 	/**
 	 * Required shadow map resolution.
 	 */
@@ -24,7 +32,9 @@ export interface LightProperties {
 	 * than the specified at "shadowMapSize".
 	 */
 	shadowMapCanShrink: boolean;
-}
+};
+
+export type LightProperties = LightPropertiesNoShadow | LightPropertiesWithShadow;
 
 export abstract class Light {
 	/**
